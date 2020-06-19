@@ -1,0 +1,509 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<style type="text/css">
+
+	*{
+		font-family: sans-serif;
+	}
+
+	body{
+		overflow-x: hidden;
+		margin: 0;
+	}
+
+	#main>a{
+		text-decoration: none;
+		display: block;
+		font-size: 1em;
+		background-color: #666;
+		color: white;
+		margin: 1vh 0;
+		text-align: center;
+		width: calc(100% - 2em);
+		padding: 2em 1em;
+		border-radius: 1vw;
+	}
+
+	#main>a:nth-child(2n){
+		background-color: #555;
+	}
+
+	#main{
+		position: fixed;
+		height: 100vh;
+		width: calc(100% - 4vw);
+		padding: 2vw;
+		overflow-y: auto;
+		text-align: center;
+		transition: all linear 0.5s;
+		top: 0;
+		background-color: #333;
+	}
+
+	#hamburger{
+		width: 38px;
+		height: 38px;
+		border-radius: 50%;
+		position: fixed;
+		left: 83vw;
+		top: 2vh;
+		opacity: 0;
+		z-index: 1000;
+		padding: 2vw;
+		text-align: center;
+		font-size: 4vh;
+		cursor: pointer;
+		transition: all linear 1s;
+	}
+}
+
+#img-container{
+	display: flex;
+	flex-direction: column;
+}
+
+img{
+	height: 50vh;
+}
+
+.eventInfo{
+	position: fixed;
+	transition: all linear 0.5s;
+	overflow-y: auto;
+	height: 100vh;
+	width: calc(100% - 20vw);
+	top: 100vh;
+	padding: 5vh 10vw;
+	line-height: 1.5em;
+	overflow: auto;
+}
+
+.eventInfo h2{
+	line-height: 6vh;
+}
+
+.teamMembers{
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+}
+
+.teamMember{
+	width: 70vw;
+	height: 70vw;
+	background-color: #ccc;
+	margin-bottom: 2vh;
+	position: relative;
+	overflow: hidden;
+}
+
+.detail{
+	box-sizing: border-box;
+	width: 100%;
+	height: 30%;
+	position: absolute;
+	top: 100%;
+	background-color: #6699c8ee;
+	transition: all ease 0.5s;
+
+	padding: 0 1em;
+
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+}
+
+.detail div{
+	font-weight:  bold;
+	padding-right: 1em;
+}
+
+.detail span{
+	font-size: 0.9em;
+	font-weight: normal;
+}
+
+.teamMember:hover .detail{
+	top: 70%;
+}
+
+</style>
+</head>
+<body>
+	<div id="main">
+		<h1 style="font-size: 0.9em; line-height: 2em; color: #5acaea; font-weight: normal;">EVENTS</h1>
+		<a href="#glitterati" id="glitteratilink">GLITTERATI</a>
+		<a href="#carpedium" id="carpediumlink">CARPEDIUM</a>
+		<a href="#thundermarch" id="thundermarchlink">THUNDERMARCH</a>
+		<a href="#laugh" id="jfllink">JUST FOR LAUGHS</a>
+		<a href="#kavi" id="kavilink">KAVI SANMELAN</a>
+		<a href="#bites" id="biteslink">A CARNIVAL OF BITES</a>
+		<a href="#natraj" id="natlink">NATRAJ</a>
+		<a href="#vwarz" id="vwarzlink">V-WARZ</a>
+		<a href="#voice" id="voilink">VOICE OF INCAND</a>
+		<a href="#unplugged" id="indielink">INDIE UNPLUGGED</a>
+		<a href="#mun" id="munlink">NITS MUN</a>
+		<a href="#deprador" id="deplink">DEPRADOR</a>
+		<a href="#sokratik" id="soklink">SOKRATIK</a>
+		<a href="#razz" id="razzlink">RAZZMATAZ</a>
+	</div>
+	<div id="hamburger">&#10005</div>
+
+
+	<!-- glitterati info -->
+	<div id="glitteratiInfo" class="eventInfo">
+		<!-- <div id="hamburger"></div> -->
+		<h2>Gliteratti</h2>
+		<div id="glitteratiDesp">
+			Gliterati, the fashion module of Incandescence, welcomes you to a colourful evening of style
+			and charisma. Enthusiastic fashion icons ready to glitter the ramp with their sizzling moves and
+			exotic cultural ethnicity. Get ready to be amazed at the exuberant grandeur exhibited at
+			Incandescence 2k19 by famous personalities like Poran Gogoi, Ashish Agarwal, Birina
+			Chakravarty, Prashant Ghosh up on that stage, gracing our cultural extravaganza with a surreal
+			display of immortal charm and everlasting beauty.
+		</div>
+	</div>
+	<!-- carpedium -->
+	<div id="carpediumInfo" class="eventInfo">
+		<!-- <div id="hamburger"></div> -->
+		<h2>Carpedium</h2>
+		<div id="carpediumDesp">
+			‘Carpe Diem’ night marks the culmination of four days of hustle and bustle of
+			Incandescence, with even more hustle and bustle, enough to wreak havoc in your neurons and strike
+			that chord of chaos to make you go crazy and give you some unforgettable memories. Witness an entire
+			crowd screaming their lungs out, singing in unison and cheering together for their favourite artists and
+			bands. Feel the bass pounding on your chest and let the music and rhythm touch the secret places of
+			you soul. Big names such as Papon, Prateek Kuhad, The Local Train, Monali Thakur, Spunk, Nikhil
+			D’Souza, Zephyrtone, Gajendra Verma had set the stage ablaze in its previous renditions.<br>
+			Come and witness the grand conclusion of Incandescence 19, because its not only the music, crowd, the
+			glitz and glamour and the euphoria ....its about the experience, the bliss.
+		</div>
+	</div>
+	<!-- thundermarch -->
+	<div id="thundermarchInfo" class="eventInfo">
+		<!-- <div id="hamburger"></div> -->
+		<h2>Thundermarch</h2>
+		<div id="thundermarchDesp">
+			Raise your horns up and get ready to headbang to the face-melting riffs, heavy blast
+			beats and the death growls as the best of metal bands from all over the nation battle it out to find who’s
+			the baddest and meanest amongst all.<br>
+			Groundbreaking performances like Guthrie Govan, Chronic Xorn, Polar Lights, Ioish, Parikrama,
+			Underside, Undying.inc, Third Sovereign, Junkyard Groove and many others in the recent years have set
+			the stage on fire.<br>
+			Come over to Thundermarch, to get the taste of metal.<br>
+			"Stay High, Stay Brutal "
+		</div>
+	</div>
+	<!-- just for laughs -->
+	<div id="jflInfo" class="eventInfo">
+		<!-- <div id="hamburger"></div> -->
+		<h2>JUST FOR LAUGHS</h2>
+		<div id="jflDesp">
+			Incandescence 19’ is all geared up with its cannons, to shoot laughter bombs and
+			run laughter riots. Its time to flee from the monochrome and be rolling in the aisles laughing to your
+			heart’s content. So, shut down all the running tabs inside your brain and join us as we press that
+			REFRESH button and churn out the guffaws out of you.<br> Acclaimed comedians and performers like
+			Rivaldo, Angad Singh, Papa CJ, Akash Gupta and many more had graced this stage in its earlier editions.
+			So, come and crack up a little. This little yet exquisite evening is not to be missed. <br>As Tallahassee said,
+			“ Enjoy the little things.”:)
+		</div>
+	</div>
+	<!-- kavi sanmelan -->
+	<div id="kaviInfo" class="eventInfo">
+		<!-- <div id="hamburger"></div> -->
+		<h2>KAVI SANMELAN</h2>
+		<div id="kaviDesp">
+			Poem or kavita is something which engraves deep meaning or sense in the most
+			captivating way. It's the undulating flow of emotions which brings up memories and recollects
+			reminiscences. A stage which in itself sets a great environment and promises to take this Festive
+			Incandescence to a next level with the best poets singing their way out. From the great Vishnu Saxena
+			the last year to the likes of Kumar Vishwas, the show is set to bring forth an amazing Kavi Samellan!!! So
+			every Kavita Premi just sit tight this Incandescence to be a part of an Epic Evening !!!
+		</div>
+	</div>
+	<!-- carnival of bites -->
+	<div id="bitesInfo" class="eventInfo">
+		<!-- <div id="hamburger"></div> -->
+		<h2>A CARNIVAL OF BITES</h2>
+		<div id="bitesDesp">
+			Ever felt jealous seeing all those wonderful dishes in Instagram feed and cooking
+			shows ? Bored of the food you eat everyday ? Hungry after all those music and dance ? If answer to any
+			of them is YES,This incandescence we bring to you the plethora of delicacies, the end to your craving for
+			a delectable dish to soothe your soul. At “The Carnival of Bites” we believes there is no sincere love than
+			the love for FOOD.. So come and experience food like never before.
+			EAT, EAT, EAT REPEAT !!!
+		</div>
+	</div>
+	<!-- natraj -->
+	<div id="natInfo" class="eventInfo">
+		<!-- <div id="hamburger"></div> -->
+		<h2>NATRAJ</h2>
+		<div id="natDesp">
+			Incandescence 2019 presents Nataraj, the open dancing platform for all those who loves to pick
+			up to the beats. Participants from across the country come to be a part of this wonderful event that
+			showcase your talent.<br>
+			Nataraj brings along thrill and joy by the breathtaking performance of the contestants. Performances
+			are judged by trained and acclaimed dancers like in the past, Dance Singh and B- Boy Arrow. Any one,
+			any style, the stage is all set to see your moves.
+		</div>
+	</div>
+	<!-- vwarz -->
+	<div id="vwarzInfo" class="eventInfo">
+		<!-- <div id="hamburger"></div> -->
+		<h2>VWARZ</h2>
+		<div id="vwarzDesp">
+			How about a moment when you discern life of yours as a gameplay and you battling around
+			everywhere, vanquishing distress everytime and being rewarded with confidence and never giving up
+			attitude.<br>
+			The moment is here! Incandescence brings an opportunity for all those agents of valour to turn up,
+			fastening the packets of adrenaline to survive among warriors from different corners of the country
+			vigilante enough to make the journey excitatory and memorable in every possible way.
+			Watch your skills helping you earning prizes and recognition in power-packed Gamers' arcade having
+			over 10K cash prizes which is set to ignite unprecedented level of heat.<br>
+		</div>
+	</div>
+	<!-- voice of incand -->
+	<div id="voiInfo" class="eventInfo">
+		<!-- <div id="hamburger"></div> -->
+		<h2>VOICE OF INCAND</h2>
+		<div id="voiDesp">
+			VoI brings to you the exhilarating blend of raw budding talents and the bright stars
+			shining in the sky.
+			Witness the grand battle unfold as the young vocalists have their mettle tested by the heavyweights of
+			the industry, which ends with one of them being named the Voice of Incand. With the crafty concoction
+			of talent and tune, this year's VoI is going to leave you longing for more.
+		</div>
+	</div>
+	<!-- Indie unplugged -->
+	<div id="indieInfo" class="eventInfo">
+		<!-- <div id="hamburger"></div> -->
+		<h2>INDIE UNPLUGGED</h2>
+		<div id="indieDesp">
+			Were you one of those kids who listened to music while playing arcade
+			games....if yes Incandescene 2k19 has something very special for you....here we
+			present<br>
+			The lakeside music event of Indie Unplugged-a music event like no other...under the
+			open february sky near the Indie Lake with the accompanying breeze along with the
+			ambient surroundings of indie made more beautiful by the lights and decorations and of
+			course the soulful music by various artists of pan-Indian popularity....Get prepared to
+			enjoy a evening of pure bliss..a evening of serenity...a evening like no other...so what
+			are you waiting for...COME AS YOU ARE!
+		</div>
+	</div>
+	<!-- mun info -->
+	<div id="munInfo" class="eventInfo">
+		<!-- <div id="hamburger"></div> -->
+		<h2>NITS MUN</h2>
+		<div id="munDesp">
+			The much-anticipated euphoria is back! Hold your excitement and welcome NITS MUN. If
+			you are looking forward to get an all-inclusive experience, the MUN committee room is the right place
+			for you. Get ready to roleplay delegates to the United Nations. It’s a battle wherein the intellectual
+			minds formulate policies on the given agenda and convince others to accept their proposal by smartly
+			playing their chance. The simulate UN committee will surely be a fun work environment for 3-days with
+			each day bringing great experiences and a lot of learning about the world. With the session finally
+			getting over here comes the Socials for all to relax.<br>
+			So come forward and give yourself a chance to change the world...
+		</div>
+	</div>
+	<!-- deprador  -->
+	<div id="depInfo" class="eventInfo">
+		<!-- <div id="hamburger"></div> -->
+		<h2>DEPRADOR</h2>
+		<div id="depDesp">
+			A charismatic personality with a never-say-die attitude and a sharp tongue is like
+			checkmate in a game of chess, you can never get the better of it. The ultimate test of wit and
+			attitude, where you battle it out amongst the unrivaled. So, razor sharp your wits, galvanize
+			your pace and prepare to delve towards the hearth of the competition and drop-ship your best,
+			as NITS is back with the 11th edition of the grand Debating phenomenon Deprador. The podium
+			that has already witnessed mighty manifestation of likes of some unparalleled cognitive minds
+			of the country including Sudeep Nagarkar, Bhaavna Arora and Novoneel Chakraborty is all set to
+			enthrall us again with top-notch intelligentsia involved.<br>
+			So, gather all your perspicacity and guts and get a hold of your breath as we set up the stage for the
+			premier Debating competition Deprador for the 11th time and accompany us on
+			“The Pursuit to Dispute”.
+		</div>
+	</div>
+	<!-- sokratik -->
+	<div id="sokInfo" class="eventInfo">
+		<!-- <div id="hamburger"></div> -->
+		<h2>SOKRATIK</h2>
+		<div id="sokDesp">
+			Are you the knowledge bank of your friend-circle?....Want yourself to be the best quizzer of
+			NITS?..Want to prove your mattle along with some exciting rewards...Wait No More....SOKRATIK is
+			here..the quiz module of Incandescence 2019...SOKRATIC is a one day long MELA quiz to be held in
+			loving memory of late Maharnab Hazarika, a student of NITS and a reputed quizzer of Assam... hosted by
+			well-known quiz-masters from the likes of Vinay Upadhyay & Sudarshan Goswami!!..making it a great
+			platform for your knowledge-savvy mind...So this Incandescene put on your thinking caps and get ready
+			to conquer all of NITS with your Quizzing talent!!!!
+		</div>
+	</div>
+	<!-- razzmataz -->
+	<div id="razzInfo" class="eventInfo">
+		<!-- <div id="hamburger"></div> -->
+		<h2>RAZZMATAZ</h2>
+		<div id="razzDesp">
+			Memories of childhood are the dreams that stayed with us after we woke up, and
+			Incandescence has always loved to cherish this dream! So we here at NITS proudly present to you
+			RAZZMATAZZ’19 - a module especially for school students of Barak Valley. Comprising of two days of
+			overflowing exuberance, stunning display of skills and a plethora of events, Razzmatazz tests the
+			blooming talents of the students and aims at bringing out the best in them. Because we were school kids
+			once too, and we care. Come, outlive the moment and outshine all!<br>
+			FUN IS JUST A CLICK AWAY.....
+		</div>
+	</div>
+
+
+	<script type="text/javascript">
+
+		var main=document.getElementById("main");
+		var allTeams=document.querySelectorAll("eventInfo");
+		var glitteratilink=document.getElementById("glitteratilink");
+		var carpediumlink=document.getElementById("carpediumlink");
+		var glitteratiInfo=document.getElementById("glitteratiInfo");
+		var carpediumInfo=document.getElementById("carpediumInfo");
+		var thundermarchlink=document.getElementById("thundermarchlink");
+		var thundermarchInfo=document.getElementById("thundermarchInfo");
+		var jfllink=document.getElementById("jfllink");
+		var jflInfo=document.getElementById("jflInfo");
+		var kavilink=document.getElementById("kavilink");
+		var kaviInfo=document.getElementById("kaviInfo");
+		var biteslink=document.getElementById("biteslink");
+		var bitesInfo=document.getElementById("bitesInfo");
+		var natlink=document.getElementById("natlink");
+		var natInfo=document.getElementById("natInfo");
+		var vwarzlink=document.getElementById("vwarzlink");
+		var vwarzInfo=document.getElementById("vwarzInfo");
+		var indielink=document.getElementById("indielink");
+		var indieInfo=document.getElementById("indieInfo");
+		var voilink=document.getElementById("voilink");
+		var voiInfo=document.getElementById("voiInfo");
+		var munlink=document.getElementById("munlink");
+		var munInfo=document.getElementById("munInfo");
+		var soklink=document.getElementById("soklink");
+		var sokInfo=document.getElementById("sokInfo");
+		var deplink=document.getElementById("deplink");
+		var depInfo=document.getElementById("depInfo");
+		var razzlink=document.getElementById("razzlink");
+		var razzInfo=document.getElementById("razzInfo");
+
+
+
+		var hamburger=document.getElementById("hamburger");
+
+		glitteratilink.addEventListener("click",function(){
+			main.style.top = "-110vh";
+			glitteratiInfo.style.top = "0vh";
+			hamburger.style.opacity = 1;
+		})
+
+		carpediumlink.addEventListener("click",function(){
+			main.style.top = "-110vh";
+			carpediumInfo.style.top = "0vh";
+			hamburger.style.opacity = 1;
+		})
+
+
+		thundermarchlink.addEventListener("click",function(){
+			main.style.top = "-110vh";
+			thundermarchInfo.style.top = "0vh";
+			hamburger.style.opacity = 1;
+		})
+
+		jfllink.addEventListener("click",function(){
+			main.style.top = "-110vh";
+			jflInfo.style.top = "0vh";
+			hamburger.style.opacity = 1;
+		})
+
+
+		kavilink.addEventListener("click",function(){
+			main.style.top = "-110vh";
+			kaviInfo.style.top = "0vh";
+			hamburger.style.opacity = 1;
+		})
+
+		biteslink.addEventListener("click",function(){
+			main.style.top = "-110vh";
+			bitesInfo.style.top = "0vh";
+			hamburger.style.opacity = 1;
+		})
+
+		natlink.addEventListener("click",function(){
+			main.style.top = "-110vh";
+			natInfo.style.top = "0vh";
+			hamburger.style.opacity = 1;
+		})
+
+		vwarzlink.addEventListener("click",function(){
+			main.style.top = "-110vh";
+			vwarzInfo.style.top = "0vh";
+			hamburger.style.opacity = 1;
+		})
+
+		indielink.addEventListener("click",function(){
+			main.style.top = "-110vh";
+			indieInfo.style.top = "0vh";
+			hamburger.style.opacity = 1;
+		})
+
+		voilink.addEventListener("click",function(){
+			main.style.top = "-110vh";
+			voiInfo.style.top = "0vh";
+			hamburger.style.opacity = 1;
+		})
+
+		munlink.addEventListener("click",function(){
+			main.style.top = "-110vh";
+			munInfo.style.top = "0vh";
+			hamburger.style.opacity = 1;
+		})
+
+		deplink.addEventListener("click",function(){
+			main.style.top = "-110vh";
+			depInfo.style.top = "0vh";
+			hamburger.style.opacity = 1;
+		})
+
+		soklink.addEventListener("click",function(){
+			main.style.top = "-110vh";
+			sokInfo.style.top = "0vh";
+			hamburger.style.opacity = 1;
+		})
+
+		razzlink.addEventListener("click",function(){
+			main.style.top = "-110vh";
+			razzInfo.style.top = "0vh";
+			hamburger.style.opacity = 1;
+		})
+
+
+
+
+		hamburger.addEventListener("click",function(){
+
+			main.style.top="0vh";
+			glitteratiInfo.style.top= "100vh";
+			carpediumInfo.style.top= "100vh";
+			thundermarchInfo.style.top= "100vh";
+			kaviInfo.style.top= "100vh";
+			jflInfo.style.top= "100vh";
+			bitesInfo.style.top= "100vh";
+			indieInfo.style.top= "100vh";
+			vwarzInfo.style.top= "100vh";
+			voiInfo.style.top= "100vh";
+			natInfo.style.top= "100vh";
+			munInfo.style.top= "100vh";
+			depInfo.style.top= "100vh";
+			sokInfo.style.top= "100vh";
+			razzInfo.style.top= "100vh";
+			hamburger.style.opacity=0;
+		})
+
+	</script>
+
+</body>
+</html>

@@ -1,0 +1,733 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/fullPage.js/3.0.4/fullpage.css">
+	<link rel="icon" type="image/png" href="media/icon.png">
+	<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/fullPage.js/3.0.4/fullpage.extensions.min.js"></script></head>
+	<style type="text/css">
+
+	     @font-face{
+			font-family: 'Century';
+			src: url('assets/century.ttf');
+		}
+
+		@font-face{
+			font-family: 'Alex';
+			src: url('assets/alex.ttf');
+		}
+
+		@font-face{
+			font-family: 'Cirkus';
+			src: url('assets/cirkus.ttf');
+		}
+
+		@font-face{
+			font-family: 'Music';
+			src: url('assets/music.otf');
+		}
+
+		@font-face{
+			font-family: 'Horns';
+			src: url('assets/horns.ttf');
+		}
+
+		@font-face{
+			font-family: 'Kitchen';
+			src: url('assets/kitchen.ttf');
+		}
+
+		*{
+			font-family: 'Century', sans-serif;
+		}
+
+
+		body{
+			margin:0;
+			background-color: #131313;
+			color: white;
+		}
+
+		#dunes{
+			position: absolute;
+			left: 0;
+			width: 100vw;
+			height: 24vh;
+			bottom: 0;
+		}
+
+		#page1{
+			color: white;
+			text-align: center;
+			width: 100%;
+			height: 100vh;
+		}
+
+		#main{
+			font-size: 7vw;
+			position: absolute;
+			top: 18vh;
+			left: 50vw;
+			transform: translateX(-50%);
+			font-family: 'Kitchen';
+		}
+
+		#date{
+			position: absolute;
+			top: 22vh;
+			left: 50vw;
+			transform: translateX(-50%);
+			font-size: 3vh;
+		}
+		
+		#incantext{
+			position: absolute;
+			width: 80vw;
+			font-size: 1em;
+			top: 35vh;
+			left: 10vw;
+			line-height: 2em;
+		}
+
+		#console{
+			position: absolute;
+			top: 50vh;
+			left: 38vw;
+			width: 55vw;
+		}
+
+		#tv{
+			width: 60vw;
+			position: absolute;
+			bottom: -1vh;
+			left: -9vw;
+			z-index: 3;
+			transform: scale(0.6) rotate(-5deg);
+		}
+
+		#incandtext{
+			position: absolute;
+			width: 50vw;
+			bottom: 4vh;
+			left: 46vw;
+			z-index: 4;
+			transform: rotate(10deg);
+		}
+
+		/*page 2*/
+		#glit-text{
+			position: relative;
+            bottom: 24vh;
+            margin: 5vh;
+		}
+		#glit-text>h2{
+			font-family: 'Alex';
+            margin-bottom: 0;
+            font-size: 18vw;
+            font-weight: normal;
+		}
+		#glit-text>p{
+			font-family: 'Century';
+            line-height: 1.1em;
+            font-size: 5vw;
+		}
+
+		#tent{
+			width: 50vw;
+			height: auto;
+			position: absolute;
+			bottom: 7vh;
+			left: 3vw;
+			z-index: 5;
+		}
+
+		#fire{
+			width: 41vw;
+			height: auto;
+			position: absolute;
+			bottom: 4vh;
+			left: 55vw;
+			z-index: 5;
+		}
+
+		/*page 3*/
+
+		#ferris{
+			width: 80vh;
+			height: 80vh;
+			position: absolute;
+			bottom: 17vh;
+			left: 10vw;
+		}
+		#nir-text{
+             position: relative;
+             bottom: 35vh;
+             margin: 4vw;
+		}
+		#nir-text>h2{
+			margin-top: 3vh;
+             margin-bottom: 5vh;
+             font-family: 'Cirkus';
+             font-size: 17vw;
+             font-weight: normal;
+		}
+
+		#nir-text>p{
+			font-family: 'Century';
+			font-size: 3.8vw;
+			line-height: 2em;
+		}
+
+		#wheel{
+			width: 75%;
+			height: 75%;
+			position: absolute;
+			top: 5%;
+			left: 50%;
+			transform: translateX(-50%);
+			border-radius: 50%;
+		}
+
+		#wheel0{
+			box-sizing: border-box;
+
+			width: 100%;
+			height: 100%;
+			border: 0.5vh solid #404041;
+			border-radius: 50%;
+
+			position: absolute;
+			top: 50%;
+			left: 50%;
+			transform: translate(-50%, -50%);
+		}
+
+		#wheel1{
+			box-sizing: border-box;
+			width: 100%;
+			height: 100%;
+			position: absolute;
+			top: 50%;
+			left: 50%;
+			transform: translate(-50%, -50%);
+			border: 1.5vh solid #00adef;
+			border-radius: 50%;
+		}
+
+		#wheel2{
+			box-sizing: border-box;
+			width: 100%;
+			height: 100%;
+			position: absolute;
+			top: 50%;
+			left: 50%;
+			transform: translate(-50%, -50%);
+			border: 1vh solid #2c7ec1;
+			border-radius: 50%;
+		}
+
+		#wheel3{
+			box-sizing: border-box;
+			width: 60%;
+			height: 60%;
+			position: absolute;
+			top: 50%;
+			left: 50%;
+			transform: translate(-50%, -50%);
+			border: 2vh solid #2c7ec1;
+			border-radius: 50%;
+		}
+
+		#wheel4{
+			box-sizing: border-box;
+			width: 95%;
+			height: 95%;
+			position: absolute;
+			top: 50%;
+			left: 50%;
+			transform: translate(-50%, -50%);
+			border: 0.5vh solid #00adef;
+			border-radius: 50%;
+		}
+
+		#wheel5{
+			box-sizing: border-box;
+			width: 50%;
+			height: 50%;
+			position: absolute;
+			top: 50%;
+			left: 50%;
+			transform: translate(-50%, -50%);
+			background-color: #2c7ec1;
+			border-radius: 50%;
+		}
+
+		#wheel6{
+			box-sizing: border-box;
+			width: 92%;
+			height: 92%;
+			position: absolute;
+			top: 50%;
+			left: 50%;
+			transform: translate(-50%, -50%);
+			background-color: #00adef;
+			border-radius: 50%;
+		}
+
+		#wheel7{
+			box-sizing: border-box;
+			width: 80%;
+			height: 80%;
+			position: absolute;
+			top: 50%;
+			left: 50%;
+			transform: translate(-50%, -50%);
+			background-color: #58585b;
+			border-radius: 50%;
+		}
+
+		#stand{
+			position: absolute;
+			top: 42%;
+			height: 80%;
+			width: 80%;
+			left: 50%;
+			transform: translateX(-50%);
+			background-color: #58585b;
+
+			clip-path: polygon(50% 0%, 100% 100%, 92% 100%, 50% 8%, 8% 100%, 0% 100%);
+		}
+
+		#base{
+			width: 100%;
+			height: 1vh;
+			position: absolute;
+			bottom: -22%;
+			background-color: #484848;
+		}
+
+		#wheel8{
+			box-sizing: border-box;
+			width: 12%;
+			height: 12%;
+			position: absolute;
+			top: 50%;
+			left: 50%;
+			transform: translate(-50%, -50%);
+			background-color: #6d6e70;
+			border-radius: 50%;
+		}
+
+		.spoke{
+			height: 95%;
+			width: 2%;
+			background-color: #ffffff;
+
+			position: absolute;
+			left: 49%;
+			top: 2%;
+		}
+
+		.seat{
+			width: 10%;
+			height: 20%;
+		}
+
+		.clip{
+			width: 100%;
+			height: 40%;
+			background-color: #f05a28;
+
+			clip-path: polygon(50% 0%, 100% 100%, 85% 100%, 50% 25%, 15% 100%, 0% 100%);
+		}
+
+		.box{
+			box-sizing: border-box;
+			width: 100%;
+			height: 60%;
+			border: 1vh solid #f7931d;
+
+			position: relative;
+		}
+
+		.door0{
+			width: 100%;
+			position: absolute;
+			top: 50%;
+			height: 50%;
+			background-color: #f7931d;
+		}
+
+		.door1{
+			width: 100%;
+			position: absolute;
+			top: 50%;
+			height: 50%;
+			width: 50%;
+			background-color: #f05a28;
+		}
+
+		.seat{
+			position: absolute;
+			transform: translateX(-50%);
+		}
+
+		/*page4*/
+		#carpedium-title{
+			position: relative;
+            bottom: 38vh;
+            margin: 4vh;
+		}
+		#carpedium-title>h2{
+			font-size: 10vw;
+            font-weight: normal;
+            margin-bottom: 0;
+            font-family: 'Music';
+		}
+
+		#carpedium-title>p{
+			font-family: 'Century';
+			font-size: 4.3vw;
+		}
+
+		#signs{
+			position: absolute;
+			left: 10vw;
+			bottom: 15vh;
+			width: 80vw;
+			z-index: -1;
+		}
+
+		#van{
+			position: absolute;
+			left: 5vw;
+			transform: rotate(-2deg);
+			bottom: 5vh;
+			z-index: 3;
+			width: 60vw;
+		}
+
+		/*page5*/
+
+		#page5{
+			color: white;
+			text-align: center;
+			width: 100vw;
+			height: 100vh;
+		}
+		#thunder-title{
+			position: relative;
+            bottom: 26vh;
+		}
+		#thunder-title>h2{
+			font-size: 11vw;
+            font-weight: normal;
+            font-family: 'Horns';
+            margin-bottom: 2vw;
+		}
+
+		#thunder-title>p{
+			font-family: 'Century';
+            font-size: 4.3vw;
+		}
+		
+		#thunder{
+			width: 84vw;
+			height: auto;
+			position: absolute;
+			bottom: 3vh;
+			left: 8vw;
+			z-index: 3;
+		}
+
+		#nav{
+			position: fixed;
+			right: 3vw;
+			top: 2vw;
+			z-index: 1000;
+			font-family: 'Century';
+		}
+
+		#nav>a{
+			text-decoration: none;
+			color: #fff;
+			color: #5acaea;
+			margin-left: 2vw;
+		}
+
+		#logo{
+			position: absolute;
+			top: 5vh;
+			left: 50vw;
+			transform: translateX(-50%);
+			width: 10vw;
+		}
+
+	</style>
+<body>
+	<script type="text/javascript">
+		window.addEventListener("resize",function(){
+		if(window.innerWidth>window.innerHeight){
+			window.location.href="../index.html";
+
+		};
+		});
+	</script>
+	<div id="nav">
+		<a href="team.html">Team</a>
+		<a href="events.html">Events</a>
+	</div>
+	<div id="fullpage">
+		<div class="section" id="page1">
+			<img src="media/logoww.png" id="logo">
+			<div id="main">INCANDESCENCE'19</div><br>
+			<div id="incantext">
+			The annual cultural festival of <br> National Institute of Technology Silchar</div>
+			<p id="date" style="color: white;"></p>
+			<img src="media/tv.svg" id="tv">
+			<img src="media/incandtext.png" id="incandtext">
+			<img src="media/console1.svg" id="console">
+			<img src="media/dunes.png" id="dunes">
+		</div>
+		<div class="section" id="page2">
+			<div id="glit-text">
+			<h2>Glitterati</h2>
+			<p>Watch the exotic descendence of stars on the ramp and glistening it up to a level next to zenith. The first day of Incandescence is set to sparkle your eyes.</p>
+		</div>
+			<img id="tent" src="media/tent.svg">
+			<img id="fire" src="media/fire.svg">
+			<img src="media/dunes.png" id="dunes">
+		</div>
+		<div class="section" id="page3">
+			<div id="nir-text">
+			<h2>Nirvana</h2>
+			<p>No laughs and talks can surpass the bar to raised on the second day of Incandescence. <br> If you miss it, you would have a lot to repent.</p>
+		</div>
+			<div id="ferris">
+				<div id="wheel">
+
+					<div class="seat" id="seat1">
+						<div class="clip"></div>
+						<div class="box">
+							<div class="door0"></div>
+							<div class="door1"></div>
+						</div>
+					</div>
+					<div class="seat" id="seat2">
+						<div class="clip"></div>
+						<div class="box">
+							<div class="door0"></div>
+							<div class="door1"></div>
+						</div>
+					</div>
+					<div class="spoke" id="spoke1"></div>
+
+					<div class="seat" id="seat3">
+						<div class="clip"></div>
+						<div class="box">
+							<div class="door0"></div>
+							<div class="door1"></div>
+						</div>
+					</div>
+					<div class="seat" id="seat4">
+						<div class="clip"></div>
+						<div class="box">
+							<div class="door0"></div>
+							<div class="door1"></div>
+						</div>
+					</div>
+					<div class="spoke" id="spoke2"></div>
+
+					<div class="seat" id="seat5">
+						<div class="clip"></div>
+						<div class="box">
+							<div class="door0"></div>
+							<div class="door1"></div>
+						</div>
+					</div>
+					<div class="seat" id="seat6">
+						<div class="clip"></div>
+						<div class="box">
+							<div class="door0"></div>
+							<div class="door1"></div>
+						</div>
+					</div>
+					<div class="spoke" id="spoke3"></div>
+
+					<div class="seat" id="seat7">
+						<div class="clip"></div>
+						<div class="box">
+							<div class="door0"></div>
+							<div class="door1"></div>
+						</div>
+					</div>
+					<div class="seat" id="seat8">
+						<div class="clip"></div>
+						<div class="box">
+							<div class="door0"></div>
+							<div class="door1"></div>
+						</div>
+					</div>
+					<div class="spoke" id="spoke4"></div>
+
+					<div id="wheel0">
+						<div id="wheel1">
+							<div id="wheel2">
+								<div id="wheel3">
+									<div id="wheel4">
+										<div id="wheel5">
+											<div id="wheel6">
+												<div id="wheel7"></div>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+
+					<div id="stand"></div>
+					<div id="base"></div>
+					<div id="wheel8"></div>
+				</div>
+			</div>
+
+
+
+			<img src="media/dunes.png" id="dunes">
+		</div>
+		<div class="section" id="page4">
+			<div id="carpedium-title">
+			<h2>Carpedium</h2>
+			<p>Groove your body, explode your heart out with melodies from Bollywood, on 17th.</p>
+		</div>
+			<img id="van" src="media/van.png">
+			<img id="signs" src="media/signs.svg">
+			<img src="media/dunes.png" id="dunes">
+
+		</div>
+		<div class="section" id="page5">
+			<div id="thunder-title">
+			<h2>Thundermarch</h2>
+			<p>Raise your horns up and get ready to headbang to the face-melting riffs. You know how precious the last day can be, with an exuberant heavy-metal night.</p>
+		</div>
+			<img src="media/thunder.svg" id="thunder">
+			<img src="media/dunes.png" id="dunes">
+		</div>
+	</div>
+
+	<script type="text/javascript">
+		var i = 0;
+		var speed = 100;
+
+		var txt = '15th FEB to 18th FEB 2019';
+
+		function typeWriter() {
+			if(i < txt.length){
+				if(i>=0) document.getElementById("date").innerHTML += txt.charAt(i);
+				i++;
+			}else{
+				i = -5;
+				document.getElementById("date").innerHTML = '';
+			}
+			setTimeout(typeWriter, speed);
+		}
+
+		typeWriter();
+	//fullpage js
+	new fullpage('#fullpage', {
+	//options here
+	autoScrolling:true,
+	scrollHorizontally: true
+});
+
+//methods
+fullpage_api.setAllowScrolling(true);
+
+//ferris wheel
+let vu, pc;
+
+function init(){
+	vu = (window.innerHeight > window.innerWidth ? window.innerWidth : window.innerHeight) / 100;
+
+	document.getElementById('ferris').style.width = 80*vu + 'px';
+	document.getElementById('ferris').style.height = 80*vu + 'px';
+
+	pc = 0.6 * vu;
+}
+
+window.addEventListener('load', init);
+
+window.addEventListener('resize', init);
+
+let spoke1 = document.getElementById('spoke1');
+let seat1 = document.getElementById('seat1');
+let seat2 = document.getElementById('seat2');
+
+let spoke2 = document.getElementById('spoke2');
+let seat3 = document.getElementById('seat3');
+let seat4 = document.getElementById('seat4');
+
+let spoke3 = document.getElementById('spoke3');
+let seat5 = document.getElementById('seat5');
+let seat6 = document.getElementById('seat6');
+
+let spoke4 = document.getElementById('spoke4');
+let seat7 = document.getElementById('seat7');
+let seat8 = document.getElementById('seat8');
+
+let i1 = 0;
+let i2 = 45;
+let i3 = 90;
+let i4 = 135;
+
+
+setInterval(function(){
+
+	i1++;
+
+	spoke1.style.transform = 'rotate('+(i1%360) + 'deg)';
+
+	seat1.style.left = 50*pc + 48*pc*Math.sin(i1*3.1416/180) + 'px';
+	seat1.style.top = 50*pc - 48*pc*Math.cos(i1*3.1416/180) + 'px';
+
+	seat2.style.left = 50*pc - 48*pc*Math.sin(i1*3.1416/180) + 'px';
+	seat2.style.top = 50*pc + 48*pc*Math.cos(i1*3.1416/180) + 'px';
+
+	i2++;
+
+	spoke2.style.transform = 'rotate('+(i2%360) + 'deg)';
+
+	seat3.style.left = 50*pc + 48*pc*Math.sin(i2*3.1416/180) + 'px';
+	seat3.style.top = 50*pc - 48*pc*Math.cos(i2*3.1416/180) + 'px';
+
+	seat4.style.left = 50*pc - 48*pc*Math.sin(i2*3.1416/180) + 'px';
+	seat4.style.top = 50*pc + 48*pc*Math.cos(i2*3.1416/180) + 'px';
+
+	i3++;
+
+	spoke3.style.transform = 'rotate('+(i3%360) + 'deg)';
+
+	seat5.style.left = 50*pc + 48*pc*Math.sin(i3*3.1416/180) + 'px';
+	seat5.style.top = 50*pc - 48*pc*Math.cos(i3*3.1416/180) + 'px';
+
+	seat6.style.left = 50*pc - 48*pc*Math.sin(i3*3.1416/180) + 'px';
+	seat6.style.top = 50*pc + 48*pc*Math.cos(i3*3.1416/180) + 'px';
+
+	i4++;
+
+	spoke4.style.transform = 'rotate('+(i4%360) + 'deg)';
+
+	seat7.style.left = 50*pc + 48*pc*Math.sin(i4*3.1416/180) + 'px';
+	seat7.style.top = 50*pc - 48*pc*Math.cos(i4*3.1416/180) + 'px';
+
+	seat8.style.left = 50*pc - 48*pc*Math.sin(i4*3.1416/180) + 'px';
+	seat8.style.top = 50*pc + 48*pc*Math.cos(i4*3.1416/180) + 'px';
+
+}, 33)
+
+
+</script>
+</body>
+</html>

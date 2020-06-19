@@ -1,0 +1,377 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<style type="text/css">
+
+	*{
+		font-family: sans-serif;
+	}
+
+	body{
+		overflow-x: hidden;
+		margin: 0;
+	}
+
+	#main>h1{
+		font-size: 0.9em;
+		color: #fff;
+		line-height: 2.5em;
+	}
+
+	#main>a{
+		text-decoration: none;
+		display: block;
+		font-size: 1em;
+		background-color: #0698c2;
+		color: white;
+		margin: 1vh 0;
+		text-align: center;
+		width: calc(100% - 2em);
+		padding: 2em 1em;
+		border-radius: 1vw;
+	}
+
+	#main>a:nth-child(2n){
+		background-color: #21b621;
+	}
+
+	#main{
+		position: fixed;
+		height: 100vh;
+		width: calc(100% - 4vw);
+		padding: 2vw;
+		overflow-y: auto;
+		text-align: center;
+		transition: all linear 0.5s;
+		top: 0;
+		background-color: #222;
+	}
+	#hamburger{
+		width: 38px;
+		height: 38px;
+		border-radius: 50%;
+		position: fixed;
+		left: 83vw;
+		top: 2vh;
+		opacity: 0;
+		z-index: 1000;
+		padding: 2vw;
+		text-align: center;
+		font-size: 4vh;
+		cursor: pointer;
+		transition: all linear 1s;
+	}
+
+	#img-container{
+		display: flex;
+		flex-direction: column;
+	}
+
+	img{
+		height: 50vh;
+	}
+
+	.teamInfo{
+		text-align: center;
+		position: fixed;
+		transition: all linear 0.5s;
+		overflow-y: auto;
+		height: 100vh;
+		width: 100%;
+		top: 100vh;
+	}
+
+	.teamInfo h2{
+		line-height: 6vh;
+	}
+
+	.teamMembers{
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+	}
+
+	.teamMember{
+		width: 70vw;
+		height: 70vw;
+		background-color: #ccc;
+		margin-bottom: 2vh;
+		position: relative;
+		overflow: hidden;
+		background-size: cover;
+		background-position: center;
+	}
+
+	.detail{
+		box-sizing: border-box;
+		width: 100%;
+		height: 30%;
+		position: absolute;
+		top: 100%;
+		background-color: #6699c8ee;
+		transition: all ease 0.5s;
+
+		padding: 0 1em;
+
+		display: flex;
+		align-items: center;
+		justify-content: space-between;
+	}
+
+	.detail div{
+		font-weight:  bold;
+		padding-right: 1em;
+	}
+
+	.detail span{
+		font-size: 0.9em;
+		font-weight: normal;
+	}
+
+	.teamMember:hover .detail{
+		top: 70%;
+	}
+	.fblogo{
+		width: 22.5vw;
+		height: 9vh;
+		display: inline;
+		position: relative;
+	}
+
+</style>
+</head>
+<body>
+	<div id="main">
+		<h1>TEAM PAGE</h1>
+		<a href="#patron" id="patronlink">PATRONS</a>
+		<a href="#convenor" id="convenerlink">CONVENOR</a>
+		<a href="#technical" id="technicallink">TECHNICAL</a>
+		<a href="#executive" id="executivelink">EXECUTIVE</a>
+		<a href="#management" id="managementlink">MANAGEMENT</a>
+		<a href="#publicity">PUBLICITY</a>
+		<a href="#infra">INFRA</a>
+		<a href="#decoration">DECORATION</a>
+		<a href="#marketing">MARKETING</a>
+	</div>
+	<div id="hamburger">&#10005</div>
+
+	<!-- patron info -->
+
+	<div id="patronsInfo" class="teamInfo">
+		<!-- <div id="hamburger"></div> -->
+		<h2>PATRONS</h2>
+		<div class="teamMembers">
+			<div class="teamMember" style="background-image: url('photos/director.jpg');">
+				<div class="detail">
+					<div style="padding-right: 1em;">Prof. Sivaji Bandyopadhyay <br> <span>Director</span></div> <a href="https://www.facebook.com/director.nitsilchar/?ref=br_rs" target="_blank"><img class="fblogo" src="photos/fblogo.png"></a>
+				</div>
+			</div>
+			<div class="teamMember" style="background-image: url('photos/deansw.jpg');">
+				<div class="detail">
+					<div style="padding-right: 1em;">R.D Mishra <br> <span>Dean SW</span></div> <a href="#"><img class="fblogo" src="photos/fblogo.png"></a>
+				</div>
+			</div>
+		</div>
+	</div>
+	<!-- convener info -->
+	<div id="convenerInfo" class="teamInfo">
+		<h2>CONVENER</h2>
+		<div class="teamMembers">
+			<div class="teamMember" style="background-image: url('photos/ankan.jpg');">
+				<div class="detail">
+					<div style="padding-right: 1em;">Ankan Kishore Pathak<br> <span>Convener</span></div> <a href="https://www.facebook.com/profile.php?id=100005991073168" target="_blank"><img class="fblogo" src="photos/fblogo.png"></a>
+				</div>
+			</div>
+		</div>
+		<div class="teamMembers">
+			<div class="teamMember" style="background-image: url('photos/anirban.jpg');">
+				<div class="detail">
+					<div style="padding-right: 1em;">Anirban Roy<br> <span>Convener</span></div> <a href="https://www.facebook.com/royanirban36" target="_blank"><img class="fblogo" src="photos/fblogo.png"></a>
+				</div>
+			</div>
+		</div>
+		<div class="teamMembers">
+			<div class="teamMember" style="background-image: url('photos/victor.jpg');">
+				<div class="detail">
+					<div style="padding-right: 1em;">Victor Das<br> <span>Convener</span></div> <a href="https://www.facebook.com/victordas96" target="_blank"><img class="fblogo" src="photos/fblogo.png"></a>
+				</div>
+			</div>
+		</div>
+	</div>
+	<!-- Tecnical team -->
+	<div id="technicalInfo" class="teamInfo">
+		<h2>TECHNICAL</h2>
+		<div class="teamMembers">
+			<div class="teamMember" style="background-image: url('photos/samim.jpg');">
+				<div class="detail">
+					<div style="padding-right: 1em;">SAMIM JAHIN <br> <span>Technical Head</span></div> <a href="https://www.facebook.com/msamimj" target="_blank"><img class="fblogo" src="photos/fblogo.png"></a>
+				</div>
+			</div>
+		</div>
+		<div class="teamMembers">
+			<div class="teamMember" style="background-image: url('photos/tukan.jpg');">
+				<div class="detail">
+					<div style="padding-right: 1em;">TUKAN DUTTA <br> <span>Frontend Web Head</span></div> <a href="https://www.facebook.com/tukan.dutta"  target="_blank"><img class="fblogo" src="photos/fblogo.png"></a>
+				</div>
+			</div>
+		</div>
+		<div class="teamMembers">
+			<div class="teamMember" style="background-image: url('photos/prachu.jpg');">
+				<div class="detail">
+					<div style="padding-right: 1em;">PRACHURJYA BASISTHA<br> <span>Frontend Web Head</span></div> <a href="https://www.facebook.com/profile.php?id=100009571023348&lst=100003674810674%3A100009571023348%3A1549261920&sk=timeline" target="_blank"><img class="fblogo" src="photos/fblogo.png"></a>
+				</div>
+			</div>
+		</div>
+		<div class="teamMembers">
+			<div class="teamMember" style="background-image: url('photos/manish.jpg');">
+				<div class="detail">
+					<div style="padding-right: 1em;">MANISH UPADHYAYA<br> <span>Backend Web Developer</span></div> <a href="https://www.facebook.com/manish.upadhyaya.3" target="_blank"><img class="fblogo" src="photos/fblogo.png"></a>
+				</div>
+			</div>
+		</div>
+		<div class="teamMembers">
+			<div class="teamMember" style="background-image: url('photos/tripathi.jpg');">
+				<div class="detail">
+					<div style="padding-right: 1em;">SHIVAM TRIPATHI<br> <span>Backend Web Developer</span></div> <a href="https://www.facebook.com/shivamtripathi2017" target="_blank"><img class="fblogo" src="photos/fblogo.png"></a>
+				</div>
+			</div>
+		</div>
+		<div class="teamMembers">
+			<div class="teamMember" style="background-image: url('photos/akash.jpg');">
+				<div class="detail">
+					<div style="padding-right: 1em;">AKASHJYOTI HAZARIKA<br> <span>Graphics Designer</span></div> <a href="https://www.facebook.com/akash.hazarika.69" target="_blank"><img class="fblogo" src="photos/fblogo.png"></a>
+				</div>
+			</div>
+		</div>
+	</div>
+	<!-- executive -->
+	<div id="executiveInfo" class="teamInfo">
+		<h2>EXECUTIVE</h2>
+		<div class="teamMembers">
+			<div class="teamMember" style="background-image: url('photos/bhaskar.jpg');">
+				<div class="detail">
+					<div style="padding-right: 1em;">Bhaskar Ganguly<br> <span>Executive Heads</span></div> <a href="https://www.facebook.com/bhaskarganguly112" target="_blank"><img class="fblogo" src="photos/fblogo.png"></a>
+				</div>
+			</div>
+		</div>
+
+		<div class="teamMembers">
+			<div class="teamMember" style="background-image: url('photos/trisha.jpg');">
+				<div class="detail">
+					<div style="padding-right: 1em;">Trisha Bhattacharyya <br> <span>Executive Heads</span></div> <a href="https://www.facebook.com/trisha.bhattacharya.1004" target="_blank"><img class="fblogo" src="photos/fblogo.png"></a>
+				</div>
+			</div>
+		</div>
+
+		<div class="teamMembers">
+			<div class="teamMember" style="background-image: url('photos/mridupawan.jpg');">
+				<div class="detail">
+					<div style="padding-right: 1em;">Mridupawan Deka <br> <span>Executive Heads</span></div> <a href="https://www.facebook.com/mridupawan.deka.9" target="_blank"><img class="fblogo" src="photos/fblogo.png"></a>
+				</div>
+			</div>
+		</div>
+
+
+	</div>
+
+	<!-- management -->
+
+	<div id="managementInfo" class="teamInfo">
+		<h2>MANAGEMENT</h2>
+		<div class="teamMembers">
+			<div class="teamMember" style="background-image: url('photos/pallab.jpg');">
+				<div class="detail">
+					<div style="padding-right: 1em;">Pallab Borgohain<br> <span>Management Heads</span></div> <a href="https://www.facebook.com/profile.php?id=100007952741353" target="_blank"><img class="fblogo" src="photos/fblogo.png"></a>
+				</div>
+			</div>
+		</div>
+
+		<div class="teamMembers">
+			<div class="teamMember" style="background-image: url('photos/bhargav.jpg');">
+				<div class="detail">
+					<div style="padding-right: 1em;">Bhargav Deka<br> <span>Management Heads</span></div> <a href="https://www.facebook.com/bhars1696" target="_blank"><img class="fblogo" src="photos/fblogo.png"></a>
+				</div>
+			</div>
+		</div>
+
+		<div class="teamMembers">
+			<div class="teamMember" style="background-image: url('photos/kunal.jpg');">
+				<div class="detail">
+					<div style="padding-right: 1em;">Kunal Sarkar <br> <span>Management Heads</span></div> <a href="https://www.facebook.com/ksarkar1008" target="_blank"><img class="fblogo" src="photos/fblogo.png"></a>
+				</div>
+			</div>
+		</div>
+
+
+	</div>
+
+
+
+
+	<script type="text/javascript">
+
+		var main=document.getElementById("main");
+		var patronlink=document.getElementById("patronlink");
+		var convenerlink=document.getElementById("convenerlink");
+		var technicallink=document.getElementById("technicallink");
+		var executivelink=document.getElementById("executivelink");
+		var managementlink=document.getElementById("managementlink");
+
+
+		var allTeams=document.querySelectorAll("teamInfo");
+
+		var patronsInfo=document.getElementById("patronsInfo");
+		var convenerInfo=document.getElementById("convenerInfo");
+		var technicalInfo=document.getElementById("technicalInfo");
+		var managementInfo=document.getElementById("managementInfo");
+		var executiveInfo=document.getElementById("executiveInfo");
+
+
+		var hamburger=document.getElementById("hamburger");
+
+		patronlink.addEventListener("click",function(){
+			main.style.top = "-110vh";
+			patronsInfo.style.top = "0vh";
+			hamburger.style.opacity = "1";
+		})
+
+		convenerlink.addEventListener("click",function(){
+			main.style.top = "-110vh";
+			convenerInfo.style.top = "0vh";
+			hamburger.style.opacity = "1";
+		})
+
+		technicallink.addEventListener("click",function(){
+			main.style.top = "-110vh";
+			technicalInfo.style.top = "0vh";
+			hamburger.style.opacity = "1";
+		})
+		executivelink.addEventListener("click",function(){
+			main.style.top = "-110vh";
+			executiveInfo.style.top = "0vh";
+			hamburger.style.opacity = "1";
+		})
+		managementlink.addEventListener("click",function(){
+			main.style.top = "-110vh";
+			managementInfo.style.top = "0vh";
+			hamburger.style.opacity = "1";
+		})
+
+		hamburger.addEventListener("click",function(){
+			main.style.top="0vh";
+			patronsInfo.style.top= "100vh";
+			convenerInfo.style.top= "100vh";
+			technicalInfo.style.top= "100vh";
+			executiveInfo.style.top= "100vh";
+			managementInfo.style.top= "100vh";
+			main.style.top="0vh";
+			hamburger.style.opacity="0";
+		})
+
+	</script>
+
+</body>
+</html>

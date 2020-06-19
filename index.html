@@ -1,0 +1,1851 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+	<title>Incandesence '19 - The annual cultural fest of NIT Silchar</title>
+	<link rel="icon" type="image/png" href="media/icon.png">
+
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
+	
+	<style type="text/css">
+
+	@font-face{
+		font-family: 'Century';
+		src: url('assets/century.ttf');
+	}
+
+	@font-face{
+		font-family: 'Alex';
+		src: url('assets/alex.ttf');
+	}
+
+	@font-face{
+		font-family: 'Cirkus';
+		src: url('assets/cirkus.ttf');
+	}
+
+	@font-face{
+		font-family: 'Music';
+		src: url('assets/music.otf');
+	}
+
+	@font-face{
+		font-family: 'Horns';
+		src: url('assets/horns.ttf');
+	}
+
+	*{
+		font-family: 'Century', sans-serif;
+	}
+
+	body{
+		margin: 0;
+		padding: 0;
+		overflow-x: hidden;
+		/*overflow: scroll;*/
+	}
+
+	#nav{
+		position: fixed;
+		right: 3vw;
+		top: 2vw;
+		z-index: 1000;
+		font-family: 'Century';
+	}
+
+	#nav>a{
+		text-decoration: none;
+		color: #fff;
+		color: #5acaea;
+		margin-left: 2vw;
+	}
+
+	#container{
+		position: fixed;
+		top: 0;
+		left: 0;
+		width: 100vw;
+		overflow-x: hidden;
+		overflow-y: scroll;
+	}
+
+	#bg{
+		background-color: #181818;
+
+		width: 100vw;
+		height: 100vh;
+		position: fixed;
+		top: 0;
+		left: 0;
+	}
+
+	#dune1{
+		background-image: url(media/dune1.png);
+		background-size: 100% 100%;
+
+		width: 500vw;
+		height: 10vh;
+
+		position: fixed;
+		top: 90vh;
+		left: 0;
+		z-index: 5;
+	}
+
+	#dune2{
+		background-image: url(media/dune2.png);
+		background-size: 100% 100%;
+
+		width: 300vw;
+		height: 15vh;
+
+		position: fixed;
+		top: 85vh;
+		left: 0;
+		z-index: 4;
+	}
+
+	#dune3{
+		background-image: url(media/dune3.png);
+		background-size: 100% 100%;
+
+		width: 200vw;
+		height: 20vh;
+
+		position: fixed;
+		top: 80vh;
+		left: 0;
+		z-index: 1;
+	}
+
+	#scroll{
+		width: 100vw;
+		height: 1900vh;
+		background-color: red;
+	}
+
+	#info1{
+		width: 22vw;
+		position: fixed;
+		top: 0;
+		left: 60vw;
+		margin-top: 30vh;
+	}
+
+	#console1{
+
+		position: fixed;
+		top: 20vh;
+		left: 10vw;
+		width: 33vw;
+
+		animation: floatConsole linear 10s infinite;
+
+		z-index: 20;
+	}
+
+	#console1.page2{
+		position: fixed;
+		top: 16vh;
+		left: 7vw;
+		width: 20vw;
+
+		animation: floatConsole linear 10s infinite;
+
+		z-index: 20;
+	}
+
+	@keyframes floatConsole{
+		0%{
+			transform: translate(0,0) rotate(0deg);
+		}
+		15%{
+			transform: translate(20px,-10px) rotate(5deg);
+		}
+		75%{
+			transform: translate(-20px, 30px) rotate(-20deg);
+		}
+		100%{
+			transform: translate(0,0) rotate(0deg);
+		}
+	}
+
+	#tv{
+		position:fixed;
+		top:50.1vh;
+		left:75vw;
+		width:20vw;
+		transform:rotate(10deg);
+		z-index:2;
+	}
+
+	#itext{
+		position: fixed;
+		top: 68vh;
+		left: 4vw;
+
+		width: 35vw;
+		height: auto;
+
+		z-index: 2;
+	}
+
+	#page2{
+		position: fixed;
+		left: 100vw;
+		bottom: 12vh;
+		z-index: 2;
+	}
+
+	#page3{
+		position: fixed;
+		left: 200vw;
+		bottom:12vh;
+		z-index: 2;
+	}
+
+	#spotlight{
+		position: fixed;
+		left: 67vw;
+		bottom: 8vh;
+		z-index: 2;
+		width: 0;
+		z-index: 3;
+		transform-origin: 0 100%;
+		transform: scale(1);
+		transition: transform ease 1s;
+	}
+
+
+	#spotlight1{
+		position:fixed;
+		left: 97vw;
+		bottom: 8vh;
+		z-index: 2;
+		width: 0;
+		z-index: 3;
+		transform-origin: 0 100%;
+		transform: scaleX(-1);
+		transition: transform ease 1s; 
+	}
+
+	#glit-text{
+		width: 28vw;
+		font-size: 1.2em;
+		text-align: center;
+		color: white;
+		position: fixed;
+		left: 58vw;
+		top: 100vh;
+		z-index: 3;
+	}
+
+	#glit-text>h2{
+		font-family: 'Alex';
+		margin-bottom: 0;
+		font-size: 4vw;
+		font-weight: normal;
+	}
+
+	#glit-text>p{
+		font-family: 'Century';
+		line-height: 1.5em;
+		font-size: 1.3vw;
+	}
+
+	#title{
+		font-size: 2em;
+	}
+
+	#camp{
+		position:fixed;
+		top:100vh;
+		width: 30vw;
+		transition: height cubic-bezier(.1,.23,.54,1.42) 0.3s, top cubic-bezier(.1,.23,.54,1.42) 0.3s;
+	}
+
+	#fire{
+		position: fixed;
+		top:100vh;
+		width: 20vw;
+		transition: height cubic-bezier(.1,.23,.54,1.42) 0.3s, top cubic-bezier(.1,.23,.54,1.42) 0.3s;
+	}
+
+	#cac1, #cac2, #cac3{
+		position: fixed;
+		z-index: 4;
+		bottom: 5vh;
+	}
+
+	#cac1{
+		height: 30vh;
+	}
+
+	#cac2{
+		height: 20vh;
+	}
+
+	#cac3{
+		height: 25vh;
+	}
+
+	#board{
+		position: fixed;
+		height: 46vh;
+		width: 30vw;
+		background-color: #505150;
+		color: #fff;
+		left: 50vw;
+		bottom: 100vh;
+
+		padding: 7vh 5vw;
+	}
+
+	#board>h2{
+		margin-top: 3vh;
+		margin-bottom: 5vh;
+		font-family: 'Cirkus';
+		font-size: 4vw;
+		font-weight: normal;
+	}
+
+	#board>p{
+		font-family: 'Century';
+		font-size: 1.3vw;
+		line-height: 2em;
+	}
+
+	#emoji1{
+		position:fixed;
+		top:100vh;
+		z-index: 3;
+		transform: scale(0.8);
+		animation: e1anim 2s alternate-reverse infinite;
+	}
+	@keyframes e1anim{
+		0%{transform: scale(0.8) rotate(-20deg);}
+		100%{transform: scale(1) rotate(20deg);}
+	}
+	#emoji2{
+		position: fixed;
+		top: 100vh;
+		z-index: 3;
+		transform: scale(0.8);
+		animation: e2anim 3s alternate-reverse infinite;
+	}
+	@keyframes e2anim{
+		0%{transform: scale(0.8) rotate(-5deg);}
+		100%{transform: scale(1) rotate(20deg);}
+	}
+	#emoji3{
+		position: fixed;
+		top: 100vh;
+		z-index: 3;
+		transform: scale(0.8);
+		animation: e3anim 4s alternate-reverse infinite;
+	}
+	@keyframes e3anim{
+		0%{transform: scale(0.7) rotate(-5deg);}
+		100%{transform: scale(1.0) rotate(10deg);}
+	}
+	#emoji4{
+		position: fixed;
+		top: 100vh;
+		z-index: 3;
+		transform: scale(0.8);
+		animation: e4anim 7s alternate-reverse infinite;
+	}
+	@keyframes e4anim{
+		0%{transform: scale(0.7) rotate(-2deg);}
+		100%{transform: scale(1) rotate(15deg);}
+	}
+	#emoji5{
+		position: fixed;
+		top: 100vh;
+		z-index: 3;
+		transform: scale(0.8);
+		animation: e5anim 2s alternate-reverse infinite;
+	}
+	@keyframes e5anim{
+		0%{transform: scale(0.8) rotate(0deg);}
+		100%{transform: scale(1) rotate(15deg);}
+	}
+	#emoji6{
+		position: fixed;
+		top: 100vh;
+		z-index: 3;
+		transform: scale(0.8);
+		animation: e6anim 2s alternate-reverse infinite;
+	}
+	@keyframes e6anim{
+		0%{transform: scale(0.8) rotate(-2deg);}
+		100%{transform: scale(1.0) rotate(5deg);}
+	}
+	/*ferry whell css*/
+	#ferris{
+		width: 80vh;
+		height: 0vh;
+		position: fixed;
+		top: 150vh;
+		left: 55vw;
+		transform: translate(-50%, -50%);
+		transition: height cubic-bezier(.1,.23,.54,1.42) 0.3s, top cubic-bezier(.1,.23,.54,1.42) 0.3s;
+	}
+	#wheel{
+		width: 75%;
+		height: 75%;
+		position: fixed;
+		top: 5%;
+		left: 50%;
+		transform: translateX(-50%);
+		border-radius: 50%;
+	}
+	#wheel0{
+		box-sizing: border-box;
+
+		width: 100%;
+		height: 100%;
+		border: 0.5vh solid #404041;
+		border-radius: 50%;
+
+		position: absolute;
+		top: 50%;
+		left: 50%;
+		transform: translate(-50%, -50%);
+	}
+	#wheel1{
+		box-sizing: border-box;
+		width: 100%;
+		height: 100%;
+		position: fixed;
+		top: 50%;
+		left: 50%;
+		transform: translate(-50%, -50%);
+		border: 1.5vh solid #00adef;
+		border-radius: 50%;
+	}
+	#wheel2{
+		box-sizing: border-box;
+		width: 100%;
+		height: 100%;
+		position: fixed;
+		top: 50%;
+		left: 50%;
+		transform: translate(-50%, -50%);
+		border: 1vh solid #2c7ec1;
+		border-radius: 50%;
+	}
+	#wheel3{
+		box-sizing: border-box;
+		width: 60%;
+		height: 60%;
+		position: fixed;
+		top: 50%;
+		left: 50%;
+		transform: translate(-50%, -50%);
+		border: 2vh solid #2c7ec1;
+		border-radius: 50%;
+	}
+	#wheel4{
+		box-sizing: border-box;
+		width: 95%;
+		height: 95%;
+		position: fixed;
+		top: 50%;
+		left: 50%;
+		transform: translate(-50%, -50%);
+		border: 0.5vh solid #00adef;
+		border-radius: 50%;
+	}
+	#wheel5{
+		box-sizing: border-box;
+		width: 50%;
+		height: 50%;
+		position: fixed;
+		top: 50%;
+		left: 50%;
+		transform: translate(-50%, -50%);
+		background-color: #2c7ec1;
+		border-radius: 50%;
+	}
+	#wheel6{
+		box-sizing: border-box;
+		width: 92%;
+		height: 92%;
+		position: fixed;
+		top: 50%;
+		left: 50%;
+		transform: translate(-50%, -50%);
+		background-color: #00adef;
+		border-radius: 50%;
+	}
+	#wheel7{
+		box-sizing: border-box;
+		width: 80%;
+		height: 80%;
+		position: fixed;
+		top: 50%;
+		left: 50%;
+		transform: translate(-50%, -50%);
+		background-color: #58585b;
+		border-radius: 50%;
+	}
+	#stand{
+		position: fixed;
+		top: 42%;
+		height: 80%;
+		width: 80%;
+		left: 50%;
+		transform: translateX(-50%);
+		background-color: #58585b;
+
+		clip-path: polygon(50% 0%, 100% 100%, 92% 100%, 50% 8%, 8% 100%, 0% 100%);
+	}
+	#base{
+		width: 100%;
+		height: 1vh;
+		position: fixed;
+		bottom: -22%;
+		background-color: #484848;
+	}
+	#wheel8{
+		box-sizing: border-box;
+		width: 12%;
+		height: 12%;
+		position: fixed;
+		top: 50%;
+		left: 50%;
+		transform: translate(-50%, -50%);
+		background-color: #6d6e70;
+		border-radius: 50%;
+	}
+	.spoke{
+		height: 95%;
+		width: 2%;
+		background-color: #ffffff;
+
+		position: fixed;
+		left: 49%;
+		top: 2%;
+	}
+	.seat{
+		width: 10%;
+		height: 20%;
+	}
+	.clip{
+		width: 100%;
+		height: 40%;
+		background-color: #f05a28;
+
+		clip-path: polygon(50% 0%, 100% 100%, 85% 100%, 50% 25%, 15% 100%, 0% 100%);
+	}
+	.box{
+		box-sizing: border-box;
+		width: 100%;
+		height: 60%;
+		border: 1vh solid #f7931d;
+		position: relative;
+	}
+	.door0{
+		width: 100%;
+		position: fixed;
+		top: 50%;
+		height: 50%;
+		background-color: #f7931d;
+	}
+	.door1{
+		width: 100%;
+		position: fixed;
+		top: 50%;
+		height: 50%;
+		width: 50%;
+		background-color: #f05a28;
+	}
+	.seat{
+		position: fixed;
+		transform: translateX(-50%);
+	}
+	#camper-van{
+		position: fixed;
+		z-index: 4;
+		left: 100vw;
+		bottom: 8vh;
+		width: 25vw;
+	}
+
+	#camper-van.move{
+		animation-name: camperMove;
+		animation-duration: 1s;
+		animation-iteration-count: infinite;
+	}
+
+	@keyframes camperMove{
+		0%{
+			transform: translate(0px, 0px) ;
+		}
+		25%{
+			transform: translate(-2px, 1px) ;
+		}
+		50%{
+			transform: translate(0px, 0px) ;
+		}
+		75%{
+			transform: translate(1px, -2px) ;
+		}
+		100%{
+			transform: translate(0px, 0px) ;
+		}
+	}
+
+
+	#board1{
+		position: fixed;
+		transform: scale(0);
+		height: 50vh;
+		width: 30vw;
+		transition: transform linear;
+		background-color: #505150;
+	}
+
+	#carpedium-title{
+		position: fixed;
+		bottom: 100vh;
+		z-index: 2;
+		font-size: 2.5em;
+		text-align: center;
+		width: 25vw;
+		color: #fff;
+	}
+
+	#carpedium-title>h2{
+		font-size: 3vw;
+		font-weight: normal;
+		margin-bottom: 0;
+		font-family: 'Music';
+	}
+
+	#carpedium-title>p{
+		font-family: 'Century';
+		font-size: 1.3vw;
+	}
+
+	#signs{
+		width: 0vw;
+		position: fixed;
+		bottom: 9vh;
+		left: 57vw;
+		z-index: 2;
+	}
+	#vlight{
+		position: fixed;
+		bottom: 3vh;
+		width: 50vw;
+		z-index: 4;
+		transform-origin: 0 73%;
+		transform: scale(0);
+	}
+
+	#thunderbox, #thunderbase{
+		position: fixed;
+		top: 150vh;
+		height: 50vh;
+		transition: top cubic-bezier(.1,.23,.54,1.42) 0.5s;
+	}
+
+	#thunderbox{
+		animation: boom 0.3s alternate-reverse infinite;
+		z-index: 3;
+	}
+
+	#thunderbase{
+		z-index: 2;
+	}
+
+	@keyframes boom{
+		0%{
+			transform:scale(1);
+		}
+		100%{
+			transform: scale(1.02);
+		}
+	}
+
+	#board2{
+		position: fixed;
+		top: 21vh;
+		height: 47vh;
+		width: 0;
+		background-color: #505150;
+		transform: scale(0);
+		transition: transform cubic-bezier(.1,.23,.54,1.42) 0.3s;
+
+		padding: 7vh 5vw;
+		color: #fff;
+	}
+
+	#board2>h2{
+		font-size: 3vw;
+		font-weight: normal;
+		font-family: 'Horns';
+		margin-bottom: 2vw;
+	}
+
+	#board2>p{
+		font-family: 'Century';
+		font-size: 1.3vw;
+		line-height: 2.3vw;
+	}
+
+	/*last page style*/
+
+	#page6{
+		position: fixed;
+		height: 75vh;
+		top: 9vh;
+		left: 120vw;
+		z-index: 3;
+	}
+	#outer{
+		width: 70vw;
+		height: 70vh;
+		position: absolute;
+		top: 1vh;
+		left: 15vw;
+		overflow: hidden;
+		background-color: #ccc;
+		border:20px ridge #26ACE2;
+	}
+
+	#inner{
+		width: 161vh;
+		height: 70vh;
+
+		display: flex;
+		align-items: stretch;
+
+		position: absolute;
+		left: 50%;
+		transform: translateX(-50%);
+		transition: all linear 0.5s;
+		background-image: url('media/map.png');
+		background-size: 100% 100%;
+	}
+
+	#inner>div{
+		cursor: pointer;
+	}
+
+	#glit{
+		width: 6.8%;
+    height: 5%;
+    left: 15.5%;
+    background-color: transparent;
+    position: absolute;
+    top: 55%;
+	}
+
+	#carp{
+		width: 6.3%;
+        height: 5.4%;
+        left: 22.5%;
+        background-color: transparent;
+        position: absolute;
+        top: 54%;
+	}
+	#thunder{
+		width: 9%;
+        height: 3.8vh;
+        left: 15.5%;
+        background-color: transparent;
+        position: absolute;
+        top: 60.5%;
+	}
+
+	#laugh{
+		    width: 9.3%;
+    height: 3.8vh;
+    left: 25%;
+    background-color: transparent;
+    position: absolute;
+    top: 61%;
+	}
+
+	#kavi{
+		width: 9.5%;
+	    height: 5%;
+	    left: 15.5%;
+	    background-color: transparent;
+	    position: absolute;
+	    top: 66.5%;
+	}
+	#bites{
+		width: 10%;
+       height: 4.7%;
+       left: 44%;
+       background-color: transparent;
+       position: absolute;
+       top: 37%;
+	}
+	#natraj{
+		width: 4.7vw;
+		height: 4vh;
+		left: 54.4%;
+		background-color: transparent;
+		position: absolute;
+		top:37%;
+	}
+	#vwarz{
+		width: 6vw;
+		height: 4vh;
+		left: 66.3%;
+		background-color: transparent;
+		position: absolute;
+		top:52%;
+	}
+
+	#razz{
+		width: 8.5vw;
+		height: 4vh;
+		left: 72.6%;
+		background-color: transparent;
+		position: absolute;
+		top:25%;
+	}
+
+	#sok{
+		width: 5%;
+	    height: 4.5%;
+	    left: 65.5%;
+	    background-color: transparent;
+	    position: absolute;
+	    top: 10.5%;
+	}
+	#dep{
+		width: 6%;
+	    height: 5%;
+	    left: 71.5%;
+	    background-color: transparent;
+	    position: absolute;
+	    top: 5%;
+	}
+	#mun{
+		width: 5%;
+	    height: 5%;
+	    left: 65.5%;
+	    background-color: transparent;
+	    position: absolute;
+	    top: 5%;
+	}
+	#voi{
+		width: 10%;
+    height: 5%;
+    left: 48%;
+    background-color: transparent;
+    position: absolute;
+    top: 80.4%;
+	}
+	#indie{
+		width: 10%;
+    height: 5%;
+    left: 47.9%;
+    background-color: transparent;
+    position: absolute;
+    top: 86%;
+	}
+
+	#info{
+		width: 34vw;
+		padding: 2vh 2vw;
+		height: 100%;
+		position: absolute;
+		background-color: #222222ee;
+		right: -40vw;
+		transition: all linear 0.5s;
+		color: white;
+		overflow: auto;
+		font-size: 1.1vw;
+		line-height: 1.8vw;
+	}
+
+	#info.show{
+		right: 0;
+	}
+
+	#stand1{
+		width: 1.4vw;
+		height: 80vh;
+		background-color: #26ACE2;
+		position: absolute;
+		top: 74vh;
+		left: 22vw;
+		border-right: 10px solid #117590;
+
+	}
+	#stand2{
+		width: 1.4vw;
+		height: 35vh;
+		background-color: #26ACE2;
+		position: absolute;
+		top: 74vh;
+		left: 77vw;
+		border-right: 10px solid #117590;
+	}
+
+	#close{
+		cursor: pointer;
+		width: 2vw;
+		height: 2vw;
+		color: white;
+		font-size: 2vw;
+		position: absolute;
+		left: 0.5vw;
+		top: 0.5vw;
+		/*border-radius: 50%;*/
+	}
+	#info.text{
+		text-align: center;
+		color: white;
+	}
+	.text{
+		display: none;
+	}
+
+
+</style>
+
+<style type="text/css">
+
+#smoke-container{
+	position: fixed;
+	left: 100vw;
+	bottom: 20vh;
+	z-index: 3;
+	opacity: 0;
+	transition: opacity linear 1s;
+}
+
+/* smoke balls */
+
+#smoke span { 
+	display: block;
+	position: absolute;
+	bottom: -35px; 
+	left: 50%; 
+	margin-left:-20px;
+	height: 0px; width: 0px;
+	border: 20px solid grey;
+	border-radius: 50%;
+	top: 39%;
+	left: 42%;
+	opacity: 0;
+	transform: scale(0.4);
+}
+
+#smoke2{
+	transform: translateX(20px);
+}
+
+#smoke2 span { 
+	display: block;
+	position: absolute;
+	bottom: -35px; left: 50%; margin-left:-20px;
+	height: 0px; width: 0px;
+	border: 25px solid grey;
+	border-radius: 35px;
+	top:39%;
+	left:44%;
+	opacity: 0;
+	transform: scale(0.4);
+}
+
+/* Smoke animation */
+
+@keyframes smokeL {
+	0%   { transform: scale(0.4) translate(0, 0) }
+	10%  { opacity: 1; transform: scale(0.4) translate(-30px, -5px) }
+	100% { opacity: 0; transform: scale(2) translate(-40px, -100px) }
+}
+
+@keyframes smokeR {
+	0%   { transform: scale(0.4) translate(0, 0) }
+	10%  { opacity: 1; transform: scale(0.4) translate(-30px, -5px) }
+	100% { opacity: 0; transform: scale(2) translate(-40px, -100px) }
+}
+
+#smoke.start .s0 { animation: smokeL 10s 0s infinite }
+#smoke.start .s1 { animation: smokeR 10s 1s infinite }
+#smoke.start .s2 { animation: smokeL 10s 2s infinite }
+#smoke.start .s3 { animation: smokeR 10s 3s infinite }
+#smoke.start .s4 { animation: smokeL 10s 4s infinite }
+#smoke.start .s5 { animation: smokeR 10s 5s infinite }
+#smoke.start .s6 { animation: smokeL 10s 6s infinite }
+#smoke.start .s7 { animation: smokeR 10s 7s infinite }
+#smoke.start .s8 { animation: smokeL 10s 8s infinite }
+#smoke.start .s9 { animation: smokeR 10s 9s infinite }
+#smoke2.start .s0 { animation: smokeL 10s 0s infinite }
+#smoke2.start .s1 { animation: smokeR 10s 1s infinite }
+#smoke2.start .s2 { animation: smokeL 10s 2s infinite }
+#smoke2.start .s3 { animation: smokeR 10s 3s infinite }
+#smoke2.start .s4 { animation: smokeL 10s 4s infinite }
+#smoke2.start .s5 { animation: smokeR 10s 5s infinite }
+#smoke2.start .s6 { animation: smokeL 10s 6s infinite }
+#smoke2.start .s7 { animation: smokeR 10s 7s infinite }
+#smoke2.start .s8 { animation: smokeL 10s 8s infinite }
+#smoke2.start .s9 { animation: smokeR 10s 9s infinite }
+.text{
+	padding-left: 3vh; 
+}
+</style>
+
+<script type="text/javascript" src="particles/particles.min.js"></script>
+
+<style type="text/css">
+
+#particles{
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 100vw;
+	height: 100vh;
+}
+</style>
+
+</head>
+<body>
+	<script type="text/javascript">
+		window.addEventListener("resize",function(){
+			if(window.innerWidth<window.innerHeight){
+				window.location.href="mobile/index.html";
+
+			};
+		});
+	</script>
+	<img style="position: fixed; z-index: 1000; width: 3vw; left: 2vw; top: 2vw;" src="media/logoww.png">
+
+	<div id="nav">
+		<a href="team.html" target="_blank">Team</a>
+	</div>
+	<div id="scroll"></div>
+	<div id="bg"></div>
+	<div id="particles"></div>
+	<div id="dune3"></div>
+	<div id="dune2"></div>
+	<div id="dune1"></div>
+
+	<div id="page1">
+		<img id="info1" src="media/info.svg">
+		<img id="itext" src="media/incandtext.png">
+		<img id="console1" src="media/console1.svg">
+		<img id="tv" src="media/tv.svg">
+	</div>
+
+	<div id="page2">
+		<img id="spotlight" class="hidden" src="media/spotl.png">
+		<div id="glit-text">
+			<h2>Glitterati</h2>
+			<p>Watch the exotic descendence of stars on the ramp and glistening it up to a level next to zenith. The first day of Incandescence is set to sparkle your eyes.</p>
+		</div>
+		<img id="spotlight1" class="hidden" src="media/spotl.svg">
+		<img id="camp" src="media/tent.svg">
+		<img id="fire" src="media/fire.svg">
+		<img id="cac1" src="media/cac1.png">
+		<img id="cac2" src="media/cac2.png">
+		<img id="cac3" src="media/cac3.png">
+	</div>
+	<div id="page3">
+		<img src="media/emo0.png" id="emoji1">
+		<img src="media/emo1.png" id="emoji2">
+		'<img src="media/emo2.png" id="emoji3">
+		<img src="media/emo3.png" id="emoji4">
+		<img src="media/emo4.png" id="emoji5">
+		<img src="media/emo5.png" id="emoji6">
+		<div id="ferris">
+			<div id="wheel">
+
+				<div class="seat" id="seat1">
+					<div class="clip"></div>
+					<div class="box">
+						<div class="door0"></div>
+						<div class="door1"></div>
+					</div>
+				</div>
+				<div class="seat" id="seat2">
+					<div class="clip"></div>
+					<div class="box">
+						<div class="door0"></div>
+						<div class="door1"></div>
+					</div>
+				</div>
+				<div class="spoke" id="spoke1"></div>
+
+				<div class="seat" id="seat3">
+					<div class="clip"></div>
+					<div class="box">
+						<div class="door0"></div>
+						<div class="door1"></div>
+					</div>
+				</div>
+				<div class="seat" id="seat4">
+					<div class="clip"></div>
+					<div class="box">
+						<div class="door0"></div>
+						<div class="door1"></div>
+					</div>
+				</div>
+				<div class="spoke" id="spoke2"></div>
+
+				<div class="seat" id="seat5">
+					<div class="clip"></div>
+					<div class="box">
+						<div class="door0"></div>
+						<div class="door1"></div>
+					</div>
+				</div>
+				<div class="seat" id="seat6">
+					<div class="clip"></div>
+					<div class="box">
+						<div class="door0"></div>
+						<div class="door1"></div>
+					</div>
+				</div>
+				<div class="spoke" id="spoke3"></div>
+
+				<div class="seat" id="seat7">
+					<div class="clip"></div>
+					<div class="box">
+						<div class="door0"></div>
+						<div class="door1"></div>
+					</div>
+				</div>
+				<div class="seat" id="seat8">
+					<div class="clip"></div>
+					<div class="box">
+						<div class="door0"></div>
+						<div class="door1"></div>
+					</div>
+				</div>
+				<div class="spoke" id="spoke4"></div>
+
+				<div id="wheel0">
+					<div id="wheel1">
+						<div id="wheel2">
+							<div id="wheel3">
+								<div id="wheel4">
+									<div id="wheel5">
+										<div id="wheel6">
+											<div id="wheel7"></div>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+
+				<div id="stand"></div>
+				<div id="base"></div>
+				<div id="wheel8"></div>
+			</div>
+		</div>
+		<!-- ferris wheel end -->
+		<div id="board">
+			<h2>Nirvana</h2>
+			<p>No laughs and talks can surpass the bar to raised on the second day of Incandescence. <br> If you miss it, you would have a lot to repent.</p>
+		</div>
+	</div>
+	<div id="page4">
+		<div id="board1">
+		</div>
+		<div id="smoke-container">
+			<div id="smoke">
+				<span class="s0"></span>
+				<span class="s1"></span>
+				<span class="s2"></span>
+				<span class="s3"></span>
+				<span class="s4"></span>
+				<span class="s5"></span>
+				<span class="s6"></span>
+				<span class="s7"></span>
+				<span class="s8"></span>
+				<span class="s9"></span>
+			</div>
+			<div id="smoke2">
+				<span class="s0"></span>
+				<span class="s1"></span>
+				<span class="s2"></span>
+				<span class="s3"></span>
+				<span class="s4"></span>
+				<span class="s5"></span>
+				<span class="s6"></span>
+				<span class="s7"></span>
+				<span class="s8"></span>
+				<span class="s9"></span>
+			</div>
+		</div>
+		<img src="media/van.png" id="camper-van"> 
+		<div id="carpedium-title">
+			<h2>Carpedium</h2>
+			<p>Groove your body, explode your heart out with melodies from Bollywood, on 17th.</p>
+		</div>
+		<img src="media/signs.svg" id="signs">
+		<img src="media/vanlight.svg" id="vlight">
+	</div>
+	<div id="page5">
+		<div id="board2">
+			<h2>Thundermarch</h2>
+			<p>Raise your horns up and get ready to headbang to the face-melting riffs. You know how precious the last day can be, with an exuberant heavy-metal night.</p>
+		</div>
+		<img src="media/thunder-box.svg" id="thunderbox">
+		<img src="media/thunder-base.svg" id="thunderbase">
+	</div>
+	<!-- page6 -->
+	<div id="page6">
+
+		<div id="outer">
+			<div id="inner">
+				<div id="glit"></div>
+				<div id="carp"></div>
+				<div id="thunder"></div>
+				<div id="laugh"></div>
+				<div id="kavi"></div>
+				<div id="bites"></div>
+				<div id="natraj"></div>
+				<div id="vwarz"></div>
+				<div id="razz"></div>
+				<div id="sok"></div>
+				<div id="dep"></div>
+				<div id="mun"></div>
+				<div id="voi"></div>
+				<div id="indie"></div>
+
+			</div>
+			<div id="info">
+				<div id="close">&#10005</div>
+				<div class="text" id="gliterrati"><h2>Gliteratti</h2>
+					<div id="glitteratiDesp">
+						Gliterati, the fashion module of Incandescence, welcomes you to a colourful evening of style
+						and charisma. Enthusiastic fashion icons ready to glitter the ramp with their sizzling moves and
+						exotic cultural ethnicity. Get ready to be amazed at the exuberant grandeur exhibited at
+						Incandescence 2k19 by famous personalities like Poran Gogoi, Ashish Agarwal, Birina
+						Chakravarty, Prashant Ghosh up on that stage, gracing our cultural extravaganza with a surreal
+						display of immortal charm and everlasting beauty.
+					</div></div>
+					<div class="text" id="carpedium"><h2>Carpedium</h2>
+						<div id="carpediumDesp">
+							‘Carpe Diem’ night marks the culmination of four days of hustle and bustle of
+							Incandescence, with even more hustle and bustle, enough to wreak havoc in your neurons and strike
+							that chord of chaos to make you go crazy and give you some unforgettable memories. Witness an entire
+							crowd screaming their lungs out, singing in unison and cheering together for their favourite artists and
+							bands. Feel the bass pounding on your chest and let the music and rhythm touch the secret places of
+							you soul. Big names such as Papon, Prateek Kuhad, The Local Train, Monali Thakur, Spunk, Nikhil
+							D’Souza, Zephyrtone, Gajendra Verma had set the stage ablaze in its previous renditions.<br>
+							Come and witness the grand conclusion of Incandescence 19, because its not only the music, crowd, the
+							glitz and glamour and the euphoria ....its about the experience, the bliss.
+						</div></div>
+						<div class="text" id="thunder-text"><h2>Thundermarch</h2>
+							<div id="thundermarchDesp">
+								Raise your horns up and get ready to headbang to the face-melting riffs, heavy blast
+								beats and the death growls as the best of metal bands from all over the nation battle it out to find who’s
+								the baddest and meanest amongst all.<br>
+								Groundbreaking performances like Guthrie Govan, Chronic Xorn, Polar Lights, Ioish, Parikrama,
+								Underside, Undying.inc, Third Sovereign, Junkyard Groove and many others in the recent years have set
+								the stage on fire.<br>
+								Come over to Thundermarch, to get the taste of metal.<br>
+								"Stay High, Stay Brutal "
+							</div></div>
+							<div class="text" id="laugh-text"><h2>JUST FOR LAUGHS</h2>
+								<div id="jflDesp">
+									Incandescence 19’ is all geared up with its cannons, to shoot laughter bombs and
+									run laughter riots. Its time to flee from the monochrome and be rolling in the aisles laughing to your
+									heart’s content. So, shut down all the running tabs inside your brain and join us as we press that
+									REFRESH button and churn out the guffaws out of you.<br> Acclaimed comedians and performers like
+									Rivaldo, Angad Singh, Papa CJ, Akash Gupta and many more had graced this stage in its earlier editions.
+									So, come and crack up a little. This little yet exquisite evening is not to be missed. <br>As Tallahassee said,
+									“ Enjoy the little things.”:)
+								</div></div>
+								<div class="text" id="kavi-text"><h2>KAVI SANMELAN</h2>
+									<div id="kaviDesp">
+										Poem or kavita is something which engraves deep meaning or sense in the most
+										captivating way. It's the undulating flow of emotions which brings up memories and recollects
+										reminiscences. A stage which in itself sets a great environment and promises to take this Festive
+										Incandescence to a next level with the best poets singing their way out. From the great Vishnu Saxena
+										the last year to the likes of Kumar Vishwas, the show is set to bring forth an amazing Kavi Samellan!!! So
+										every Kavita Premi just sit tight this Incandescence to be a part of an Epic Evening !!!
+									</div></div>
+									<div class="text" id="bites-text"><h2>A CARNIVAL OF BITES</h2>
+										<div id="bitesDesp">
+											Ever felt jealous seeing all those wonderful dishes in Instagram feed and cooking
+											shows ? Bored of the food you eat everyday ? Hungry after all those music and dance ? If answer to any
+											of them is YES,This incandescence we bring to you the plethora of delicacies, the end to your craving for
+											a delectable dish to soothe your soul. At “The Carnival of Bites” we believes there is no sincere love than
+											the love for FOOD.. So come and experience food like never before.
+											EAT, EAT, EAT REPEAT !!!
+										</div></div>
+										<div class="text" id="natraj-text"><h2>NATRAJ</h2>
+											<div id="natDesp">
+												Incandescence 2019 presents Nataraj, the open dancing platform for all those who loves to pick
+												up to the beats. Participants from across the country come to be a part of this wonderful event that
+												showcase your talent.<br>
+												Nataraj brings along thrill and joy by the breathtaking performance of the contestants. Performances
+												are judged by trained and acclaimed dancers like in the past, Dance Singh and B- Boy Arrow. Any one,
+												any style, the stage is all set to see your moves.
+											</div></div>
+											<div class="text" id="vwarz-text"><h2>VWARZ</h2>
+												<div id="vwarzDesp">
+													How about a moment when you discern life of yours as a gameplay and you battling around
+													everywhere, vanquishing distress everytime and being rewarded with confidence and never giving up
+													attitude.<br>
+													The moment is here! Incandescence brings an opportunity for all those agents of valour to turn up,
+													fastening the packets of adrenaline to survive among warriors from different corners of the country
+													vigilante enough to make the journey excitatory and memorable in every possible way.
+													Watch your skills helping you earning prizes and recognition in power-packed Gamers' arcade having
+													over 10K cash prizes which is set to ignite unprecedented level of heat.<br>
+												</div></div>
+												<div class="text" id="razz-text">	<h2>RAZZMATAZ</h2>
+													<div id="razzDesp">
+														Memories of childhood are the dreams that stayed with us after we woke up, and
+														Incandescence has always loved to cherish this dream! So we here at NITS proudly present to you
+														RAZZMATAZZ’19 - a module especially for school students of Barak Valley. Comprising of two days of
+														overflowing exuberance, stunning display of skills and a plethora of events, Razzmatazz tests the
+														blooming talents of the students and aims at bringing out the best in them. Because we were school kids
+														once too, and we care. Come, outlive the moment and outshine all!<br>
+														FUN IS JUST A CLICK AWAY.....
+													</div></div>
+													<div class="text" id="sok-text"><h2>SOKRATIK</h2>
+														<div id="sokDesp">
+															Are you the knowledge bank of your friend-circle?....Want yourself to be the best quizzer of
+															NITS?..Want to prove your mattle along with some exciting rewards...Wait No More....SOKRATIK is
+															here..the quiz module of Incandescence 2019...SOKRATIC is a one day long MELA quiz to be held in
+															loving memory of late Maharnab Hazarika, a student of NITS and a reputed quizzer of Assam... hosted by
+															well-known quiz-masters from the likes of Vinay Upadhyay & Sudarshan Goswami!!..making it a great
+															platform for your knowledge-savvy mind...So this Incandescene put on your thinking caps and get ready
+															to conquer all of NITS with your Quizzing talent!!!!
+														</div></div>
+														<div class="text" id="dep-text"><h2>DEPRADOR</h2>
+															<div id="depDesp">
+																A charismatic personality with a never-say-die attitude and a sharp tongue is like
+																checkmate in a game of chess, you can never get the better of it. The ultimate test of wit and
+																attitude, where you battle it out amongst the unrivaled. So, razor sharp your wits, galvanize
+																your pace and prepare to delve towards the hearth of the competition and drop-ship your best,
+																as NITS is back with the 11th edition of the grand Debating phenomenon Deprador. The podium
+																that has already witnessed mighty manifestation of likes of some unparalleled cognitive minds
+																of the country including Sudeep Nagarkar, Bhaavna Arora and Novoneel Chakraborty is all set to
+																enthrall us again with top-notch intelligentsia involved.<br>
+																So, gather all your perspicacity and guts and get a hold of your breath as we set up the stage for the
+																premier Debating competition Deprador for the 11th time and accompany us on
+																“The Pursuit to Dispute”.
+															</div></div>
+															<div class="text" id="mun-text"><h2>NITS MUN</h2>
+																<div id="munDesp">
+																	The much-anticipated euphoria is back! Hold your excitement and welcome NITS MUN. If
+																	you are looking forward to get an all-inclusive experience, the MUN committee room is the right place
+																	for you. Get ready to roleplay delegates to the United Nations. It’s a battle wherein the intellectual
+																	minds formulate policies on the given agenda and convince others to accept their proposal by smartly
+																	playing their chance. The simulate UN committee will surely be a fun work environment for 3-days with
+																	each day bringing great experiences and a lot of learning about the world. With the session finally
+																	getting over here comes the Socials for all to relax.<br>
+																	So come forward and give yourself a chance to change the world...
+																</div></div>
+
+														<div class="text" id="voi-text"><h2>VOICE OF INCAND</h2>
+																<div id="voiDesp">
+																	VoI brings to you the exhilarating blend of raw budding talents and the bright stars
+			                                                        shining in the sky.
+			                                                        Witness the grand battle unfold as the young vocalists have their mettle tested by the heavyweights of
+			                                                        the industry, which ends with one of them being named the Voice of Incand. With the crafty concoction
+			                                                        of talent and tune, this year's VoI is going to leave you longing for more.
+																</div></div>
+																<div class="text" id="indie-text"><h2>INDIE UNPLUGGED</h2>
+											                     <div id="indieDesp">
+											                     Were you one of those kids who listened to music while playing arcade
+		                                                         games....if yes Incandescene 2k19 has something very special for you....here we
+		                                                         present<br>
+		                                                         The lakeside music event of Indie Unplugged-a music event like no other...under the
+		                                                         open february sky near the Indie Lake with the accompanying breeze along with the
+		                                                         ambient surroundings of indie made more beautiful by the lights and decorations and of
+		                                                         course the soulful music by various artists of pan-Indian popularity....Get prepared to
+		                                                         enjoy a evening of pure bliss..a evening of serenity...a evening like no other...so what
+		                                                         are you waiting for...COME AS YOU ARE!
+																</div></div>
+
+
+															</div>
+														</div>
+														<div id="stand1"></div>
+														<div id="stand2"></div>
+
+													</div>
+
+												</body>
+
+												<script type="text/javascript">
+
+	// let scrolled;
+
+	// function scrolll(x){
+
+	// 	for(scrolled = 0; scrolled < x; scrolled += 100){
+
+	// 		window.pageYOffset = scrolled;
+	// 	}
+	// }
+
+	// document.getElementById('eventsLink').addEventListener('click', function(){
+	// 	scrolll(5000);
+	// })
+
+	let sR = window.innerWidth/1366;
+
+	document.getElementById('scroll').style.height = 11850 + window.innerHeight + "px";
+
+	let vu, pc;
+
+	function init(){
+
+		vu = (window.innerHeight > window.innerWidth ? window.innerWidth : window.innerHeight) / 100;
+
+		document.getElementById('ferris').style.width = 80*vu + 'px';
+		document.getElementById('ferris').style.height = 80*vu + 'px';
+
+		pc = 0.6 * vu;
+	}
+
+	window.addEventListener('load', init);
+
+	window.addEventListener('resize', init);
+
+	let spoke1 = document.getElementById('spoke1');
+	let seat1 = document.getElementById('seat1');
+	let seat2 = document.getElementById('seat2');
+
+	let spoke2 = document.getElementById('spoke2');
+	let seat3 = document.getElementById('seat3');
+	let seat4 = document.getElementById('seat4');
+
+	let spoke3 = document.getElementById('spoke3');
+	let seat5 = document.getElementById('seat5');
+	let seat6 = document.getElementById('seat6');
+
+	let spoke4 = document.getElementById('spoke4');
+	let seat7 = document.getElementById('seat7');
+	let seat8 = document.getElementById('seat8');
+
+	let i = 0;
+	let i2 = 45;
+	let i3 = 90;
+	let i4 = 135;
+
+
+	setInterval(function(){
+
+		i++;
+
+		spoke1.style.transform = 'rotate('+(i%360) + 'deg)';
+
+		seat1.style.left = 50*pc + 48*pc*Math.sin(i*3.1416/180) + 'px';
+		seat1.style.top = 50*pc - 48*pc*Math.cos(i*3.1416/180) + 'px';
+
+		seat2.style.left = 50*pc - 48*pc*Math.sin(i*3.1416/180) + 'px';
+		seat2.style.top = 50*pc + 48*pc*Math.cos(i*3.1416/180) + 'px';
+
+		i2++;
+
+		spoke2.style.transform = 'rotate('+(i2%360) + 'deg)';
+
+		seat3.style.left = 50*pc + 48*pc*Math.sin(i2*3.1416/180) + 'px';
+		seat3.style.top = 50*pc - 48*pc*Math.cos(i2*3.1416/180) + 'px';
+
+		seat4.style.left = 50*pc - 48*pc*Math.sin(i2*3.1416/180) + 'px';
+		seat4.style.top = 50*pc + 48*pc*Math.cos(i2*3.1416/180) + 'px';
+
+		i3++;
+
+		spoke3.style.transform = 'rotate('+(i3%360) + 'deg)';
+
+		seat5.style.left = 50*pc + 48*pc*Math.sin(i3*3.1416/180) + 'px';
+		seat5.style.top = 50*pc - 48*pc*Math.cos(i3*3.1416/180) + 'px';
+
+		seat6.style.left = 50*pc - 48*pc*Math.sin(i3*3.1416/180) + 'px';
+		seat6.style.top = 50*pc + 48*pc*Math.cos(i3*3.1416/180) + 'px';
+
+		i4++;
+
+		spoke4.style.transform = 'rotate('+(i4%360) + 'deg)';
+
+		seat7.style.left = 50*pc + 48*pc*Math.sin(i4*3.1416/180) + 'px';
+		seat7.style.top = 50*pc - 48*pc*Math.cos(i4*3.1416/180) + 'px';
+
+		seat8.style.left = 50*pc - 48*pc*Math.sin(i4*3.1416/180) + 'px';
+		seat8.style.top = 50*pc + 48*pc*Math.cos(i4*3.1416/180) + 'px';
+
+	}, 33)
+
+	document.addEventListener('scroll', function(){
+
+		var sTop, sTopLand;
+
+		sTop = window.pageYOffset;
+
+		if(sTop<900){
+			sTopLand = sTop;
+		}else if(sTop>=900 && sTop<1700){
+			sTopLand = 900;
+		}else if(sTop<4300){
+			sTopLand = sTop - 800;
+		}else if(sTop>=4300 && sTop<5100){
+			sTopLand = 3500;
+		}else if(sTop>=5100){
+			sTopLand = sTop - 1600;
+		}
+
+		let sTopvw = sTop/window.innerWidth;
+
+		document.getElementById('dune1').style.left = -sTopLand*sR/2 + "px";
+		document.getElementById('dune2').style.left = -sTopLand*sR/4 + "px";
+		document.getElementById('dune3').style.left = -sTopLand*sR/8 + "px";
+
+		document.getElementById('info1').style.top = -sTop+"px";
+
+		document.getElementById('itext').style.left = 0.04*window.innerWidth - sTop*sR/2 + "px";
+		document.getElementById('tv').style.left = 0.7*window.innerWidth - (sTop*1.3)*sR + "px";
+
+		let console1 = document.getElementById('console1');
+		let cac1 = document.getElementById('cac1');
+		let cac2 = document.getElementById('cac2');
+		let cac3 = document.getElementById('cac3');
+
+		if(sTop<500){
+
+			console1.style.left = 0.1*window.innerWidth - sTop*sR/6 + "px";
+
+			let stemp = 1 - (sTop/1200);
+
+			console1.style.width = 0.33*window.innerWidth * stemp + 'px';
+
+		}else if(sTop>1700){
+
+			console1.style.left = 0.1*window.innerWidth - 500/6 - (sTop-1700)*sR/6 + "px";
+
+			cac2.style.left = 1.3*window.innerWidth - (sTop-1700)*sR/1.4 + "px";
+		}
+
+		let glitText = document.getElementById('glit-text');
+		glitText.style.top = (sTop<900 ? 100 : sTop>1700 ? 30 : -(sTop-900)/(800/70)+100 )+'vh';
+		glitText.style.left = sTop<1700 ? '59vw' : 0.59*window.innerWidth - (sTop-1700)*sR/1.8 + 'px';
+
+		document.getElementById('spotlight').style.width = (sTop<700 ? 0 : sTop>900 ? 20 : (sTop-700)/10)+'vw';
+		document.getElementById('spotlight1').style.width = (sTop<700 ? 0 : sTop>900 ? 20 : (sTop-700)/10)+'vw';
+		document.getElementById('spotlight').style.left = 0.9*window.innerWidth - sTopLand*sR/1.8 +"px";
+		document.getElementById('spotlight1').style.left = 1.3*window.innerWidth - sTopLand*sR/1.8+"px";
+
+		let fire = document.getElementById('fire');
+		let camp = document.getElementById('camp');
+
+		fire.style.left = 0.95*window.innerWidth - sTopLand*sR +"px";
+		camp.style.left = 0.75*window.innerWidth - sTopLand*sR +"px";
+
+		if(sTop<900){
+			camp.style.top = "100vh";
+			camp.style.height="0vh";
+			fire.style.top= "100vh";
+		}else{
+			camp.style.top = "56vh";
+			camp.style.height="35vh";
+			fire.style.top= "72vh";
+		}
+
+		let ferris = document.getElementById("ferris");
+
+		if(sTop<3400){
+			ferris.style.top=150+"vh";
+			ferris.style.height=0+"vh";
+		}else{
+			ferris.style.top=55+"vh";
+			ferris.style.height=80+"vh";
+			ferris.style.left = 0.95*window.innerWidth - (sTopLand + 800 - 3400)*sR + "px";
+		}
+
+		let board = document.getElementById('board');
+
+		if(sTop>4600){
+			board.style.bottom = "20vh";
+			board.style.left = 0.5*window.innerWidth - (sTopLand - 4300 + 800)*sR + "px";	
+		}else{
+			board.style.bottom = (100 - 80*(sTop-4300)/300)+"vh";
+		}
+
+		if(sTop>4300){
+			document.getElementById("emoji1").style.top = "83vh";
+			document.getElementById('emoji1').style.left = 0.5*window.innerWidth - (sTopLand - 4300 + 800)*sR + "px";	
+		}else{
+			document.getElementById("emoji1").style.top = "100vh";
+		}
+		if(sTop>4350){
+			document.getElementById("emoji2").style.top = "77vh";
+			document.getElementById('emoji2').style.left = 0.525*window.innerWidth - (sTopLand - 4350 + 800)*sR + "px";	
+		}else{
+			document.getElementById("emoji2").style.top = "100vh";
+		}
+		if(sTop>4400){
+			document.getElementById("emoji3").style.top = "82vh";
+			document.getElementById('emoji3').style.left = 0.55*window.innerWidth - (sTopLand - 4400 + 800)*sR + "px";	
+		}else{
+			document.getElementById("emoji3").style.top = "100vh";
+		}
+		if(sTop>4450){
+			document.getElementById("emoji4").style.top = "82vh";
+			document.getElementById('emoji4').style.left = 0.575*window.innerWidth - (sTopLand - 4450 + 800)*sR + "px";	
+		}else{
+			document.getElementById("emoji4").style.top = "100vh";
+		}
+		if(sTop>4500){
+			document.getElementById("emoji5").style.top = "79vh";
+			document.getElementById('emoji5').style.left = 0.6*window.innerWidth - (sTopLand - 4500 + 800)*sR + "px";	
+		}else{
+			document.getElementById("emoji5").style.top = "100vh";
+		}
+		if(sTop>4550){
+			document.getElementById("emoji6").style.top = "75vh";
+			document.getElementById('emoji6').style.left = 0.625*window.innerWidth - (sTopLand - 4550 + 800)*sR + "px";
+		}else{
+			document.getElementById("emoji6").style.top = "100vh";
+		}
+
+		let campervan = document.getElementById('camper-van');
+		let smokeContainer = document.getElementById('smoke-container');
+
+		console.log(sTop);
+
+		if(sTop<5100){
+			campervan.style.left = window.innerWidth + "px";
+			smokeContainer.style.left = window.innerWidth + "px";
+			smokeContainer.style.opacity = 0;
+		}else if(sTop<6270){
+			campervan.classList.remove('move');
+			campervan.style.left = window.innerWidth - (sTopLand + 1600 - 5100)*sR + "px";
+			cac1.style.left = 1.5*window.innerWidth - (sTopLand + 1600 - 5100)*sR + "px";
+			smokeContainer.style.left = window.innerWidth - (sTopLand + 1600 - 5100)*sR + "px";
+		}else if(sTop<8300){
+			campervan.classList.add('move');
+			campervan.style.left = window.innerWidth - (6270 - 5100)*sR + (sTopLand + 1600 - 6270)*sR/10+"px";
+			cac1.style.left = 1.5*window.innerWidth - (sTopLand + 1600 - 5100)*sR + "px";
+			cac2.style.left = 2*window.innerWidth - (sTopLand + 1600 - 5100)*sR + "px";
+			cac3.style.left = 2.5*window.innerWidth - (sTopLand + 1600 - 5100)*sR + "px";
+			smokeContainer.style.left = window.innerWidth - (6270 - 5100)*sR + (sTopLand + 1600 - 6270)*sR/10+"px";
+			smokeContainer.style.opacity = 1;
+			document.getElementById('smoke').className = "start";
+			document.getElementById('smoke2').className = "start";
+		}else{
+			// campervan.classList.remove('move');
+			campervan.style.left = window.innerWidth - (6270 - 5100)*sR + (8300 - 6270)*sR/10 - (sTop - 8300)*sR +"px";
+			cac3.style.left = 2.5*window.innerWidth - (sTopLand + 1600 - 5100)*sR + "px";
+			cac2.style.left = 3.5*window.innerWidth - (sTopLand + 1600 - 5100)*sR + "px";
+			cac1.style.left = 3.6*window.innerWidth - (sTopLand + 1600 - 5100)*sR + "px";
+			smokeContainer.style.left = window.innerWidth - (6270 - 5100)*sR + (8300 - 6270)*sR/10 - (sTop - 8300)*sR +"px";
+		}
+
+		let carpediumTitle = document.getElementById('carpedium-title');
+		let signs = document.getElementById('signs');
+
+		carpediumTitle.style.bottom = (sTop<8000 ? 100 : sTop>8300 ? 50 : (8600 - sTop)/6) + "vh"
+
+		if(sTop<8300){
+			carpediumTitle.style.left = "30vw";
+		}else{	
+			carpediumTitle.style.left = 0.30*window.innerWidth - (sTop-8300)*sR + "px";
+		}
+
+		if(sTop<7800){
+			signs.style.left = window.innerWidth + "px";
+		}else{
+			signs.style.left = window.innerWidth - (sTopLand+1600-7800)*sR + "px";
+			signs.style.width="31vw";
+		}
+
+		let vlight = document.getElementById('vlight');
+
+
+		vlight.style.left = campervan.offsetLeft + campervan.offsetWidth - 20 + "px";
+
+		if(sTop>=7800 && sTop<8300){
+			vlight.style.transform = 'scale(' + (sTop-7800)/500 + ')' ;
+		}
+
+		if(sTop>8900){
+			document.getElementById("board2").style.left = 1.1*window.innerWidth - (sTop-8900)*sR + "px";
+			document.getElementById("board2").style.width="31vw";
+			document.getElementById("board2").style.transform="scale(1)";
+		}
+
+		let thunderbox = document.getElementById('thunderbox');
+		let thunderbase = document.getElementById('thunderbase');
+
+		if(sTop>9500){
+			thunderbox.style.top = "45vh";
+			thunderbox.style.left = 1.1*window.innerWidth - (sTop - 9500)*sR + "px";
+
+			thunderbase.style.top = "45vh";
+			thunderbase.style.left = 1.1*window.innerWidth - (sTop - 9500)*sR + "px";
+		}else{
+			thunderbox.style.top = "150vh";
+			thunderbase.style.top = "150vh";
+		}
+
+		let page6 = document.getElementById('page6');
+
+		if(sTop>10000){	
+			page6.style.left = 1.2*window.innerWidth - (sTop - 10000)*sR + "px";
+			cac3.style.left = 1.2*window.innerWidth - (sTop - 10000)*sR + "px";
+			cac2.style.left = 2.2*window.innerWidth - (sTop - 10000)*sR + "px";
+		}
+
+	})
+
+
+
+
+
+
+
+let outer =	document.getElementById('outer');
+let inner = document.getElementById('inner');
+
+let p = 50*(inner.offsetWidth - outer.offsetWidth)/inner.offsetWidth;
+
+let eventInfoOpen = false;
+
+outer.addEventListener('mousemove', function(e){
+
+	if(!eventInfoOpen){
+		let xpc = (e.clientX-outer.offsetLeft)/outer.offsetWidth;
+
+		let temp = 2*p*(xpc-0.5)+50;
+
+		inner.style.transform = 'translateX('+ -temp +'%)';
+	}
+})
+
+	// info
+
+	let glitterati= document.getElementById('glit');
+	let info= document.getElementById('info');
+	let close= document.getElementById('close');
+	let carpedium= document.getElementById('carp');
+	let glit= document.getElementById('gliterrati');
+	let carp= document.getElementById('carpedium');
+	let desp= document.getElementsByClassName('text');
+	let thunder= document.getElementById('thunder');
+	let thunderText= document.getElementById('thunder-text');
+	let laugh= document.getElementById('laugh');
+	let laughText= document.getElementById('laugh-text');
+	let kavi= document.getElementById('kavi');
+	let kaviText= document.getElementById('kavi-text');
+	let bites= document.getElementById('bites');
+	let bitesText= document.getElementById('bites-text');
+	let natraj= document.getElementById('natraj');
+	let natrajText= document.getElementById('natraj-text');
+	let vwarz= document.getElementById('vwarz');
+	let vwarzText= document.getElementById('vwarz-text');
+	let razz= document.getElementById('razz');
+	let razzText= document.getElementById('razz-text');
+	let sok= document.getElementById('sok');
+	let sokText= document.getElementById('sok-text');
+	let dep= document.getElementById('dep');
+	let depText= document.getElementById('dep-text');
+	let mun= document.getElementById('mun');
+	let munText= document.getElementById('mun-text');
+	let voi= document.getElementById('voi');
+	let voiText= document.getElementById('voi-text');
+	let indie= document.getElementById('indie');
+	let indieText= document.getElementById('indie-text');
+
+	function handleEventOpen(eventDiv){
+
+		eventInfoOpen = true;
+
+		info.classList.add("show");
+
+		for(var i=0; i<desp.length;i++){
+			desp[i].style.display="none";
+		}
+		eventDiv.style.display="block";
+	}
+
+	glitterati.addEventListener('click', function(){
+		handleEventOpen(glit);
+	});
+	carpedium.addEventListener('click', function(){
+		handleEventOpen(carp);
+	})
+
+	thunder.addEventListener('click',function(){
+		handleEventOpen(thunderText);
+	})
+
+	laugh.addEventListener('click',function(){
+		handleEventOpen(laughText);
+	})
+
+	kavi.addEventListener('click',function(){
+
+		handleEventOpen(kaviText);
+	})
+
+	bites.addEventListener('click',function(){
+
+		handleEventOpen(bitesText);
+	})
+
+	natraj.addEventListener('click',function(){
+
+		handleEventOpen(natrajText);
+	})
+
+	vwarz.addEventListener('click',function(){
+
+		handleEventOpen(vwarzText);
+	})
+
+	razz.addEventListener('click',function(){
+
+		handleEventOpen(razzText);
+	})
+
+	sok.addEventListener('click',function(){
+
+		handleEventOpen(sokText);
+	})
+	dep.addEventListener('click',function(){
+
+		handleEventOpen(depText);
+	})
+	mun.addEventListener('click',function(){
+
+		handleEventOpen(munText);
+	})
+	voi.addEventListener('click',function(){
+
+		handleEventOpen(voiText);
+	})
+
+	indie.addEventListener('click',function(){
+
+		handleEventOpen(indieText);
+	})
+
+	close.addEventListener('click',function(){
+		eventInfoOpen = false;
+		info.classList.remove('show');
+
+	})
+
+</script>
+
+<script type="text/javascript">
+	particlesJS.load('particles', 'particles/particles.json', function() {
+		console.log('callback - particles.min.js config loaded');
+	});
+</script>
+
+</html>
